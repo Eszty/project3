@@ -1,13 +1,13 @@
 //
-//  project3Tests.h
-//  project3Tests
+//  surveyTests.h
+//  surveyTests
 //
-//  Created by Eszter Fodor on 6/4/12.
+//  Created by Eszter Fodor on 6/5/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface project3Tests : SenTestCase
+@interface surveyTests : SenTestCase
 
 @end

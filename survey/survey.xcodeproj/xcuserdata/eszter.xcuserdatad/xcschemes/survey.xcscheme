@@ -13,10 +13,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C9A9AAF9157CCDF100CF2FD4"
-               BuildableName = "project3.app"
-               BlueprintName = "project3"
-               ReferencedContainer = "container:project3.xcodeproj">
+               BlueprintIdentifier = "C99A4C3E157E4D58008C91CF"
+               BuildableName = "survey.app"
+               BlueprintName = "survey"
+               ReferencedContainer = "container:survey.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,20 +31,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C9A9AB28157CCDF200CF2FD4"
-               BuildableName = "project3Tests.octest"
-               BlueprintName = "project3Tests"
-               ReferencedContainer = "container:project3.xcodeproj">
+               BlueprintIdentifier = "C99A4C59157E4D58008C91CF"
+               BuildableName = "surveyTests.octest"
+               BlueprintName = "surveyTests"
+               ReferencedContainer = "container:survey.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C9A9AAF9157CCDF100CF2FD4"
-            BuildableName = "project3.app"
-            BlueprintName = "project3"
-            ReferencedContainer = "container:project3.xcodeproj">
+            BlueprintIdentifier = "C99A4C3E157E4D58008C91CF"
+            BuildableName = "survey.app"
+            BlueprintName = "survey"
+            ReferencedContainer = "container:survey.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -60,10 +60,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C9A9AAF9157CCDF100CF2FD4"
-            BuildableName = "project3.app"
-            BlueprintName = "project3"
-            ReferencedContainer = "container:project3.xcodeproj">
+            BlueprintIdentifier = "C99A4C3E157E4D58008C91CF"
+            BuildableName = "survey.app"
+            BlueprintName = "survey"
+            ReferencedContainer = "container:survey.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -78,10 +78,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C9A9AAF9157CCDF100CF2FD4"
-            BuildableName = "project3.app"
-            BlueprintName = "project3"
-            ReferencedContainer = "container:project3.xcodeproj">
+            BlueprintIdentifier = "C99A4C3E157E4D58008C91CF"
+            BuildableName = "survey.app"
+            BlueprintName = "survey"
+            ReferencedContainer = "container:survey.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

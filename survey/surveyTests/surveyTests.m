@@ -1,14 +1,14 @@
 //
-//  project3Tests.m
-//  project3Tests
+//  surveyTests.m
+//  surveyTests
 //
-//  Created by Eszter Fodor on 6/4/12.
+//  Created by Eszter Fodor on 6/5/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "project3Tests.h"
+#import "surveyTests.h"
 
-@implementation project3Tests
+@implementation surveyTests
 
 - (void)setUp
 {
@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in project3Tests");
+    STFail(@"Unit tests are not implemented yet in surveyTests");
 }
 
 @end
