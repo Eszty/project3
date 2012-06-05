@@ -21,6 +21,9 @@
 		C99A4C73157E4DF4008C91CF /* IDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99A4C72157E4DF4008C91CF /* IDView.xib */; };
 		C99A4C75157E4E12008C91CF /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99A4C74157E4E12008C91CF /* QuestionView.xib */; };
 		C99A4C77157E4E20008C91CF /* EndView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99A4C76157E4E20008C91CF /* EndView.xib */; };
+		C99A4C7E157E4F30008C91CF /* IDView.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A4C7D157E4F30008C91CF /* IDView.m */; };
+		C99A4C81157E4F46008C91CF /* QuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A4C80157E4F46008C91CF /* QuestionView.m */; };
+		C99A4C84157E4F50008C91CF /* EndView.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A4C83157E4F50008C91CF /* EndView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		C99A4C72157E4DF4008C91CF /* IDView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDView.xib; sourceTree = "<group>"; };
 		C99A4C74157E4E12008C91CF /* QuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
 		C99A4C76157E4E20008C91CF /* EndView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndView.xib; sourceTree = "<group>"; };
+		C99A4C7C157E4F30008C91CF /* IDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDView.h; sourceTree = "<group>"; };
+		C99A4C7D157E4F30008C91CF /* IDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDView.m; sourceTree = "<group>"; };
+		C99A4C7F157E4F46008C91CF /* QuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionView.h; sourceTree = "<group>"; };
+		C99A4C80157E4F46008C91CF /* QuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionView.m; sourceTree = "<group>"; };
+		C99A4C82157E4F50008C91CF /* EndView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndView.h; sourceTree = "<group>"; };
+		C99A4C83157E4F50008C91CF /* EndView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,12 @@
 				C99A4C72157E4DF4008C91CF /* IDView.xib */,
 				C99A4C74157E4E12008C91CF /* QuestionView.xib */,
 				C99A4C76157E4E20008C91CF /* EndView.xib */,
+				C99A4C7C157E4F30008C91CF /* IDView.h */,
+				C99A4C7D157E4F30008C91CF /* IDView.m */,
+				C99A4C7F157E4F46008C91CF /* QuestionView.h */,
+				C99A4C80157E4F46008C91CF /* QuestionView.m */,
+				C99A4C82157E4F50008C91CF /* EndView.h */,
+				C99A4C83157E4F50008C91CF /* EndView.m */,
 				C99A4C4A157E4D58008C91CF /* Supporting Files */,
 			);
 			path = survey;
@@ -262,6 +277,9 @@
 			files = (
 				C99A4C50157E4D58008C91CF /* main.m in Sources */,
 				C99A4C54157E4D58008C91CF /* AppDelegate.m in Sources */,
+				C99A4C7E157E4F30008C91CF /* IDView.m in Sources */,
+				C99A4C81157E4F46008C91CF /* QuestionView.m in Sources */,
+				C99A4C84157E4F50008C91CF /* EndView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
