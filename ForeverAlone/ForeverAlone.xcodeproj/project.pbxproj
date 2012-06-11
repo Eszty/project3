@@ -26,6 +26,14 @@
 		C9A5EA821585E88700C7B324 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA551585E88700C7B324 /* Foundation.framework */; };
 		C9A5EA8A1585E88700C7B324 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA881585E88700C7B324 /* InfoPlist.strings */; };
 		C9A5EA8D1585E88700C7B324 /* ForeverAloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EA8C1585E88700C7B324 /* ForeverAloneTests.m */; };
+		C9A5EA9D158610D600C7B324 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA97158610D600C7B324 /* FirstViewController.xib */; };
+		C9A5EA9E158610D600C7B324 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA99158610D600C7B324 /* InfoPlist.strings */; };
+		C9A5EA9F158610D600C7B324 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA9B158610D600C7B324 /* SecondViewController.xib */; };
+		C9A5EAA11586112600C7B324 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EAA01586112600C7B324 /* ThirdViewController.xib */; };
+		C9A5EAA31586119500C7B324 /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EAA21586119500C7B324 /* FourthViewController.xib */; };
+		C9A5EAA6158613C300C7B324 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EAA5158613C300C7B324 /* ThirdViewController.m */; };
+		C9A5EAA9158613D300C7B324 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EAA8158613D300C7B324 /* FourthViewController.m */; };
+		C9A5EAAC1586144800C7B324 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +73,17 @@
 		C9A5EA891585E88700C7B324 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9A5EA8B1585E88700C7B324 /* ForeverAloneTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForeverAloneTests.h; sourceTree = "<group>"; };
 		C9A5EA8C1585E88700C7B324 /* ForeverAloneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForeverAloneTests.m; sourceTree = "<group>"; };
+		C9A5EA98158610D600C7B324 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = FirstViewController.xib; sourceTree = "<group>"; };
+		C9A5EA9A158610D600C7B324 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		C9A5EA9C158610D600C7B324 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = SecondViewController.xib; sourceTree = "<group>"; };
+		C9A5EAA01586112600C7B324 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		C9A5EAA21586119500C7B324 /* FourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
+		C9A5EAA4158613C300C7B324 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		C9A5EAA5158613C300C7B324 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		C9A5EAA7158613D300C7B324 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		C9A5EAA8158613D300C7B324 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,16 +145,25 @@
 			children = (
 				C9A5EA621585E88700C7B324 /* AppDelegate.h */,
 				C9A5EA631585E88700C7B324 /* AppDelegate.m */,
+				C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */,
+				C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */,
 				C9A5EA651585E88700C7B324 /* FirstViewController.h */,
 				C9A5EA661585E88700C7B324 /* FirstViewController.m */,
+				C9A5EA731585E88700C7B324 /* FirstViewController.xib */,
 				C9A5EA681585E88700C7B324 /* first.png */,
 				C9A5EA6A1585E88700C7B324 /* first@2x.png */,
-				C9A5EA6C1585E88700C7B324 /* SecondViewController.h */,
-				C9A5EA6D1585E88700C7B324 /* SecondViewController.m */,
 				C9A5EA6F1585E88700C7B324 /* second.png */,
 				C9A5EA711585E88700C7B324 /* second@2x.png */,
-				C9A5EA731585E88700C7B324 /* FirstViewController.xib */,
+				C9A5EA6D1585E88700C7B324 /* SecondViewController.m */,
+				C9A5EA6C1585E88700C7B324 /* SecondViewController.h */,
 				C9A5EA761585E88700C7B324 /* SecondViewController.xib */,
+				C9A5EAA4158613C300C7B324 /* ThirdViewController.h */,
+				C9A5EAA5158613C300C7B324 /* ThirdViewController.m */,
+				C9A5EAA01586112600C7B324 /* ThirdViewController.xib */,
+				C9A5EAA7158613D300C7B324 /* FourthViewController.h */,
+				C9A5EAA8158613D300C7B324 /* FourthViewController.m */,
+				C9A5EAA21586119500C7B324 /* FourthViewController.xib */,
+				C9A5EA96158610D600C7B324 /* en.lproj */,
 				C9A5EA5A1585E88700C7B324 /* Supporting Files */,
 			);
 			path = ForeverAlone;
@@ -169,6 +197,16 @@
 				C9A5EA881585E88700C7B324 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9A5EA96158610D600C7B324 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5EA97158610D600C7B324 /* FirstViewController.xib */,
+				C9A5EA99158610D600C7B324 /* InfoPlist.strings */,
+				C9A5EA9B158610D600C7B324 /* SecondViewController.xib */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +286,11 @@
 				C9A5EA721585E88700C7B324 /* second@2x.png in Resources */,
 				C9A5EA751585E88700C7B324 /* FirstViewController.xib in Resources */,
 				C9A5EA781585E88700C7B324 /* SecondViewController.xib in Resources */,
+				C9A5EA9D158610D600C7B324 /* FirstViewController.xib in Resources */,
+				C9A5EA9E158610D600C7B324 /* InfoPlist.strings in Resources */,
+				C9A5EA9F158610D600C7B324 /* SecondViewController.xib in Resources */,
+				C9A5EAA11586112600C7B324 /* ThirdViewController.xib in Resources */,
+				C9A5EAA31586119500C7B324 /* FourthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +329,9 @@
 				C9A5EA641585E88700C7B324 /* AppDelegate.m in Sources */,
 				C9A5EA671585E88700C7B324 /* FirstViewController.m in Sources */,
 				C9A5EA6E1585E88700C7B324 /* SecondViewController.m in Sources */,
+				C9A5EAA6158613C300C7B324 /* ThirdViewController.m in Sources */,
+				C9A5EAA9158613D300C7B324 /* FourthViewController.m in Sources */,
+				C9A5EAAC1586144800C7B324 /* FlipsideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +384,30 @@
 				C9A5EA891585E88700C7B324 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9A5EA97158610D600C7B324 /* FirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A5EA98158610D600C7B324 /* en */,
+			);
+			name = FirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		C9A5EA99158610D600C7B324 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A5EA9A158610D600C7B324 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9A5EA9B158610D600C7B324 /* SecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A5EA9C158610D600C7B324 /* en */,
+			);
+			name = SecondViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

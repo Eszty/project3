@@ -23,8 +23,14 @@
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    
+    
+    UIViewController *viewController3 = [[SecondViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+    UIViewController *viewController4 = [[SecondViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];
+    
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
