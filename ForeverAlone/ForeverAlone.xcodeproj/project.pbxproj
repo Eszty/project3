@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9A5EA541585E88700C7B324 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA531585E88700C7B324 /* UIKit.framework */; };
+		C9A5EA561585E88700C7B324 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA551585E88700C7B324 /* Foundation.framework */; };
+		C9A5EA581585E88700C7B324 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA571585E88700C7B324 /* CoreGraphics.framework */; };
+		C9A5EA5E1585E88700C7B324 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA5C1585E88700C7B324 /* InfoPlist.strings */; };
+		C9A5EA601585E88700C7B324 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EA5F1585E88700C7B324 /* main.m */; };
+		C9A5EA641585E88700C7B324 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EA631585E88700C7B324 /* AppDelegate.m */; };
+		C9A5EA671585E88700C7B324 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EA661585E88700C7B324 /* FirstViewController.m */; };
+		C9A5EA691585E88700C7B324 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA681585E88700C7B324 /* first.png */; };
+		C9A5EA6B1585E88700C7B324 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA6A1585E88700C7B324 /* first@2x.png */; };
+		C9A5EA6E1585E88700C7B324 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EA6D1585E88700C7B324 /* SecondViewController.m */; };
+		C9A5EA701585E88700C7B324 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA6F1585E88700C7B324 /* second.png */; };
+		C9A5EA721585E88700C7B324 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA711585E88700C7B324 /* second@2x.png */; };
+		C9A5EA751585E88700C7B324 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA731585E88700C7B324 /* FirstViewController.xib */; };
+		C9A5EA781585E88700C7B324 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA761585E88700C7B324 /* SecondViewController.xib */; };
+		C9A5EA801585E88700C7B324 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA7F1585E88700C7B324 /* SenTestingKit.framework */; };
+		C9A5EA811585E88700C7B324 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA531585E88700C7B324 /* UIKit.framework */; };
+		C9A5EA821585E88700C7B324 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA551585E88700C7B324 /* Foundation.framework */; };
+		C9A5EA8A1585E88700C7B324 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EA881585E88700C7B324 /* InfoPlist.strings */; };
+		C9A5EA8D1585E88700C7B324 /* ForeverAloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EA8C1585E88700C7B324 /* ForeverAloneTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9A5EA831585E88700C7B324 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9A5EA461585E88600C7B324 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9A5EA4E1585E88700C7B324;
+			remoteInfo = ForeverAlone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9A5EA4F1585E88700C7B324 /* ForeverAlone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForeverAlone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A5EA531585E88700C7B324 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9A5EA551585E88700C7B324 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9A5EA571585E88700C7B324 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9A5EA5B1585E88700C7B324 /* ForeverAlone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ForeverAlone-Info.plist"; sourceTree = "<group>"; };
+		C9A5EA5D1585E88700C7B324 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9A5EA5F1585E88700C7B324 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9A5EA611585E88700C7B324 /* ForeverAlone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ForeverAlone-Prefix.pch"; sourceTree = "<group>"; };
+		C9A5EA621585E88700C7B324 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C9A5EA631585E88700C7B324 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C9A5EA651585E88700C7B324 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		C9A5EA661585E88700C7B324 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		C9A5EA681585E88700C7B324 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		C9A5EA6A1585E88700C7B324 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		C9A5EA6C1585E88700C7B324 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		C9A5EA6D1585E88700C7B324 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		C9A5EA6F1585E88700C7B324 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		C9A5EA711585E88700C7B324 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C9A5EA741585E88700C7B324 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
+		C9A5EA771585E88700C7B324 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		C9A5EA7E1585E88700C7B324 /* ForeverAloneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForeverAloneTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A5EA7F1585E88700C7B324 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C9A5EA871585E88700C7B324 /* ForeverAloneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ForeverAloneTests-Info.plist"; sourceTree = "<group>"; };
+		C9A5EA891585E88700C7B324 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9A5EA8B1585E88700C7B324 /* ForeverAloneTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForeverAloneTests.h; sourceTree = "<group>"; };
+		C9A5EA8C1585E88700C7B324 /* ForeverAloneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForeverAloneTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9A5EA4C1585E88700C7B324 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A5EA541585E88700C7B324 /* UIKit.framework in Frameworks */,
+				C9A5EA561585E88700C7B324 /* Foundation.framework in Frameworks */,
+				C9A5EA581585E88700C7B324 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9A5EA7A1585E88700C7B324 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A5EA801585E88700C7B324 /* SenTestingKit.framework in Frameworks */,
+				C9A5EA811585E88700C7B324 /* UIKit.framework in Frameworks */,
+				C9A5EA821585E88700C7B324 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9A5EA441585E88600C7B324 = {
+			isa = PBXGroup;
+			children = (
+				C9A5EA591585E88700C7B324 /* ForeverAlone */,
+				C9A5EA851585E88700C7B324 /* ForeverAloneTests */,
+				C9A5EA521585E88700C7B324 /* Frameworks */,
+				C9A5EA501585E88700C7B324 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9A5EA501585E88700C7B324 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5EA4F1585E88700C7B324 /* ForeverAlone.app */,
+				C9A5EA7E1585E88700C7B324 /* ForeverAloneTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9A5EA521585E88700C7B324 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5EA531585E88700C7B324 /* UIKit.framework */,
+				C9A5EA551585E88700C7B324 /* Foundation.framework */,
+				C9A5EA571585E88700C7B324 /* CoreGraphics.framework */,
+				C9A5EA7F1585E88700C7B324 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9A5EA591585E88700C7B324 /* ForeverAlone */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5EA621585E88700C7B324 /* AppDelegate.h */,
+				C9A5EA631585E88700C7B324 /* AppDelegate.m */,
+				C9A5EA651585E88700C7B324 /* FirstViewController.h */,
+				C9A5EA661585E88700C7B324 /* FirstViewController.m */,
+				C9A5EA681585E88700C7B324 /* first.png */,
+				C9A5EA6A1585E88700C7B324 /* first@2x.png */,
+				C9A5EA6C1585E88700C7B324 /* SecondViewController.h */,
+				C9A5EA6D1585E88700C7B324 /* SecondViewController.m */,
+				C9A5EA6F1585E88700C7B324 /* second.png */,
+				C9A5EA711585E88700C7B324 /* second@2x.png */,
+				C9A5EA731585E88700C7B324 /* FirstViewController.xib */,
+				C9A5EA761585E88700C7B324 /* SecondViewController.xib */,
+				C9A5EA5A1585E88700C7B324 /* Supporting Files */,
+			);
+			path = ForeverAlone;
+			sourceTree = "<group>";
+		};
+		C9A5EA5A1585E88700C7B324 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5EA5B1585E88700C7B324 /* ForeverAlone-Info.plist */,
+				C9A5EA5C1585E88700C7B324 /* InfoPlist.strings */,
+				C9A5EA5F1585E88700C7B324 /* main.m */,
+				C9A5EA611585E88700C7B324 /* ForeverAlone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9A5EA851585E88700C7B324 /* ForeverAloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5EA8B1585E88700C7B324 /* ForeverAloneTests.h */,
+				C9A5EA8C1585E88700C7B324 /* ForeverAloneTests.m */,
+				C9A5EA861585E88700C7B324 /* Supporting Files */,
+			);
+			path = ForeverAloneTests;
+			sourceTree = "<group>";
+		};
+		C9A5EA861585E88700C7B324 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5EA871585E88700C7B324 /* ForeverAloneTests-Info.plist */,
+				C9A5EA881585E88700C7B324 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9A5EA4E1585E88700C7B324 /* ForeverAlone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9A5EA901585E88700C7B324 /* Build configuration list for PBXNativeTarget "ForeverAlone" */;
+			buildPhases = (
+				C9A5EA4B1585E88700C7B324 /* Sources */,
+				C9A5EA4C1585E88700C7B324 /* Frameworks */,
+				C9A5EA4D1585E88700C7B324 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForeverAlone;
+			productName = ForeverAlone;
+			productReference = C9A5EA4F1585E88700C7B324 /* ForeverAlone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9A5EA7D1585E88700C7B324 /* ForeverAloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9A5EA931585E88700C7B324 /* Build configuration list for PBXNativeTarget "ForeverAloneTests" */;
+			buildPhases = (
+				C9A5EA791585E88700C7B324 /* Sources */,
+				C9A5EA7A1585E88700C7B324 /* Frameworks */,
+				C9A5EA7B1585E88700C7B324 /* Resources */,
+				C9A5EA7C1585E88700C7B324 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9A5EA841585E88700C7B324 /* PBXTargetDependency */,
+			);
+			name = ForeverAloneTests;
+			productName = ForeverAloneTests;
+			productReference = C9A5EA7E1585E88700C7B324 /* ForeverAloneTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9A5EA461585E88600C7B324 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C9A5EA491585E88600C7B324 /* Build configuration list for PBXProject "ForeverAlone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C9A5EA441585E88600C7B324;
+			productRefGroup = C9A5EA501585E88700C7B324 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9A5EA4E1585E88700C7B324 /* ForeverAlone */,
+				C9A5EA7D1585E88700C7B324 /* ForeverAloneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9A5EA4D1585E88700C7B324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A5EA5E1585E88700C7B324 /* InfoPlist.strings in Resources */,
+				C9A5EA691585E88700C7B324 /* first.png in Resources */,
+				C9A5EA6B1585E88700C7B324 /* first@2x.png in Resources */,
+				C9A5EA701585E88700C7B324 /* second.png in Resources */,
+				C9A5EA721585E88700C7B324 /* second@2x.png in Resources */,
+				C9A5EA751585E88700C7B324 /* FirstViewController.xib in Resources */,
+				C9A5EA781585E88700C7B324 /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9A5EA7B1585E88700C7B324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A5EA8A1585E88700C7B324 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9A5EA7C1585E88700C7B324 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9A5EA4B1585E88700C7B324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A5EA601585E88700C7B324 /* main.m in Sources */,
+				C9A5EA641585E88700C7B324 /* AppDelegate.m in Sources */,
+				C9A5EA671585E88700C7B324 /* FirstViewController.m in Sources */,
+				C9A5EA6E1585E88700C7B324 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9A5EA791585E88700C7B324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A5EA8D1585E88700C7B324 /* ForeverAloneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9A5EA841585E88700C7B324 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9A5EA4E1585E88700C7B324 /* ForeverAlone */;
+			targetProxy = C9A5EA831585E88700C7B324 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9A5EA5C1585E88700C7B324 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A5EA5D1585E88700C7B324 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9A5EA731585E88700C7B324 /* FirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A5EA741585E88700C7B324 /* en */,
+			);
+			name = FirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		C9A5EA761585E88700C7B324 /* SecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A5EA771585E88700C7B324 /* en */,
+			);
+			name = SecondViewController.xib;
+			sourceTree = "<group>";
+		};
+		C9A5EA881585E88700C7B324 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A5EA891585E88700C7B324 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9A5EA8E1585E88700C7B324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9A5EA8F1585E88700C7B324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9A5EA911585E88700C7B324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForeverAlone/ForeverAlone-Prefix.pch";
+				INFOPLIST_FILE = "ForeverAlone/ForeverAlone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9A5EA921585E88700C7B324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForeverAlone/ForeverAlone-Prefix.pch";
+				INFOPLIST_FILE = "ForeverAlone/ForeverAlone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9A5EA941585E88700C7B324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ForeverAlone.app/ForeverAlone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForeverAlone/ForeverAlone-Prefix.pch";
+				INFOPLIST_FILE = "ForeverAloneTests/ForeverAloneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C9A5EA951585E88700C7B324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ForeverAlone.app/ForeverAlone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForeverAlone/ForeverAlone-Prefix.pch";
+				INFOPLIST_FILE = "ForeverAloneTests/ForeverAloneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9A5EA491585E88600C7B324 /* Build configuration list for PBXProject "ForeverAlone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9A5EA8E1585E88700C7B324 /* Debug */,
+				C9A5EA8F1585E88700C7B324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9A5EA901585E88700C7B324 /* Build configuration list for PBXNativeTarget "ForeverAlone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9A5EA911585E88700C7B324 /* Debug */,
+				C9A5EA921585E88700C7B324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9A5EA931585E88700C7B324 /* Build configuration list for PBXNativeTarget "ForeverAloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9A5EA941585E88700C7B324 /* Debug */,
+				C9A5EA951585E88700C7B324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9A5EA461585E88600C7B324 /* Project object */;
+}
