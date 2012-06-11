@@ -34,6 +34,7 @@
 		C9A5EAA6158613C300C7B324 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EAA5158613C300C7B324 /* ThirdViewController.m */; };
 		C9A5EAA9158613D300C7B324 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EAA8158613D300C7B324 /* FourthViewController.m */; };
 		C9A5EAAC1586144800C7B324 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */; };
+		C9A5EAAE158620C400C7B324 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EAAD158620C400C7B324 /* FlipsideViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		C9A5EAA8158613D300C7B324 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		C9A5EAAD158620C400C7B324 /* FlipsideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				C9A5EA631585E88700C7B324 /* AppDelegate.m */,
 				C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */,
 				C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */,
+				C9A5EAAD158620C400C7B324 /* FlipsideViewController.xib */,
 				C9A5EA651585E88700C7B324 /* FirstViewController.h */,
 				C9A5EA661585E88700C7B324 /* FirstViewController.m */,
 				C9A5EA731585E88700C7B324 /* FirstViewController.xib */,
@@ -154,8 +157,8 @@
 				C9A5EA6A1585E88700C7B324 /* first@2x.png */,
 				C9A5EA6F1585E88700C7B324 /* second.png */,
 				C9A5EA711585E88700C7B324 /* second@2x.png */,
-				C9A5EA6D1585E88700C7B324 /* SecondViewController.m */,
 				C9A5EA6C1585E88700C7B324 /* SecondViewController.h */,
+				C9A5EA6D1585E88700C7B324 /* SecondViewController.m */,
 				C9A5EA761585E88700C7B324 /* SecondViewController.xib */,
 				C9A5EAA4158613C300C7B324 /* ThirdViewController.h */,
 				C9A5EAA5158613C300C7B324 /* ThirdViewController.m */,
@@ -291,6 +294,7 @@
 				C9A5EA9F158610D600C7B324 /* SecondViewController.xib in Resources */,
 				C9A5EAA11586112600C7B324 /* ThirdViewController.xib in Resources */,
 				C9A5EAA31586119500C7B324 /* FourthViewController.xib in Resources */,
+				C9A5EAAE158620C400C7B324 /* FlipsideViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

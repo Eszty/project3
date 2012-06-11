@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FourthViewController : NSObject
+@interface FourthViewController : UIViewController
 
 @end

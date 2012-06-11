@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FlipsideViewController : NSObject
+@interface FlipsideViewController : UIViewController
 
 @end

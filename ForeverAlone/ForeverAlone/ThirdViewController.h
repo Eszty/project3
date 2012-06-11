@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ThirdViewController : NSObject
+@interface ThirdViewController : UIViewController
 
 @end
