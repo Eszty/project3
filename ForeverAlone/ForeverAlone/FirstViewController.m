@@ -7,12 +7,20 @@
 //
 
 #import "FirstViewController.h"
+#import "AppDelegate.h"
 
 @interface FirstViewController ()
 
 @end
 
 @implementation FirstViewController
+
+@synthesize username;
+@synthesize password;
+@synthesize login;
+@synthesize reg;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,5 +48,28 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+#pragma mark - Flipside View
+
+- (IBAction)regist:(id)sender
+{
+    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideViewController" bundle:nil];
+    controller.delegate = self;
+    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:controller animated:YES];
+}
+
+- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+
+
+
+
+
+
 
 @end

@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlipsideViewController.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <FlipsideViewControllerDelegate>
 
+@property (nonatomic, retain) IBOutlet UITextField *username;
+@property (nonatomic, retain) IBOutlet UITextField *password;
+@property (nonatomic, strong) IBOutlet UIButton *login;
+
+
+@property (nonatomic, strong) IBOutlet UIButton *reg;
+
+- (IBAction)regist:(id)sender;
 @end

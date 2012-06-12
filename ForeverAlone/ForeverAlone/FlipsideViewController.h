@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class FlipsideViewController;
+
+@protocol FlipsideViewControllerDelegate
+- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
+@end
+
+
 @interface FlipsideViewController : UIViewController
 
+
+@property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
+
 @end
+
+
