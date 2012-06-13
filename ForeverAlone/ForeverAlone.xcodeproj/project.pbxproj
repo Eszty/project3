@@ -35,6 +35,7 @@
 		C9A5EAA9158613D300C7B324 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EAA8158613D300C7B324 /* FourthViewController.m */; };
 		C9A5EAAC1586144800C7B324 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */; };
 		C9A5EAAE158620C400C7B324 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EAAD158620C400C7B324 /* FlipsideViewController.xib */; };
+		C9A5EAB41588B89700C7B324 /* anonymity.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A5EAB31588B89700C7B324 /* anonymity.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		C9A5EAAD158620C400C7B324 /* FlipsideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideViewController.xib; sourceTree = "<group>"; };
+		C9A5EAB31588B89700C7B324 /* anonymity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anonymity.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		C9A5EA591585E88700C7B324 /* ForeverAlone */ = {
 			isa = PBXGroup;
 			children = (
+				C9A5EAB31588B89700C7B324 /* anonymity.png */,
 				C9A5EA621585E88700C7B324 /* AppDelegate.h */,
 				C9A5EA631585E88700C7B324 /* AppDelegate.m */,
 				C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */,
@@ -295,6 +298,7 @@
 				C9A5EAA11586112600C7B324 /* ThirdViewController.xib in Resources */,
 				C9A5EAA31586119500C7B324 /* FourthViewController.xib in Resources */,
 				C9A5EAAE158620C400C7B324 /* FlipsideViewController.xib in Resources */,
+				C9A5EAB41588B89700C7B324 /* anonymity.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

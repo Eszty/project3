@@ -20,6 +20,11 @@
 
 @property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
 
+@property (nonatomic, retain) UIBarButtonItem *back;
+
+- (IBAction)goBack:(id)sender;
+
+
 @end
 
 

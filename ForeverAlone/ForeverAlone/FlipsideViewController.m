@@ -7,6 +7,8 @@
 //
 
 #import "FlipsideViewController.h"
+#import "AppDelegate.h"
+#import "FirstViewController.h"
 
 @interface FlipsideViewController ()
 
@@ -16,6 +18,7 @@
 @implementation FlipsideViewController
 
 @synthesize delegate;
+@synthesize back;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,6 +27,7 @@
         self.title = NSLocalizedString(@"Flipside", @"Flipside");
         self.tabBarItem.image = [UIImage imageNamed:@"flipside"];
     }
+    
     return self;
 }
 
@@ -31,6 +35,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)viewDidUnload
@@ -43,5 +48,29 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+#pragma mark - Actions
+
+- (IBAction)goBack:(id)sender
+{
+    [self.delegate flipsideViewControllerDidFinish:self];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
