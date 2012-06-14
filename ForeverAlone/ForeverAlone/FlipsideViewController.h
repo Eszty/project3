@@ -37,6 +37,12 @@
                                usingDelegate: (id <UIImagePickerControllerDelegate,
                                                UINavigationControllerDelegate>) delegate;
 
+- (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
+- (void)textFieldDidEndEditing:(UITextField *)textField;
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event touch:(UITextField*)textField;
+
+
+
 @end
 
 

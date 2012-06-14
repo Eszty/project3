@@ -64,7 +64,25 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+//Close keyboard on 'return'
+- (BOOL)textFieldShouldReturn:(UITextField *) theTextField {
+    [theTextField resignFirstResponder];
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField {   
+    [textField resignFirstResponder]; 
+}
 
+
+/* Doesn't work, dont know why yet
+  * closing keybaord on touch outside the textfield
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event touch:(UITextField*)textField
+{
+    [textField resignFirstResponder];
+    //[self.password resignFirstResponder];
+    
+}
+*/
 
 
 

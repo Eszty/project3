@@ -102,6 +102,15 @@
                                 usingDelegate: self];
 }
 
+//Close keyboard on 'return'
+- (BOOL)textFieldShouldReturn:(UITextField *) theTextField {
+    [theTextField resignFirstResponder];
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField {   
+    [textField resignFirstResponder]; 
+}
+
 
 
 

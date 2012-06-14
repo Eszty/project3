@@ -135,7 +135,7 @@
 						<string key="NSFrame">{{68, 156}, {184, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="794516815"/>
+						<reference key="NSNextKeyView" ref="839437994"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -172,7 +172,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Register</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="579150067">
+						<object class="NSColor" key="IBUIHighlightedTitleColor" id="145103204">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
@@ -180,21 +180,21 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
-						<object class="NSColor" key="IBUINormalTitleShadowColor" id="134555856">
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="799834069">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="158487504">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="33572770">
 							<int key="type">2</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="794855968">
+						<object class="NSFont" key="IBUIFont" id="295158781">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIButton" id="794516815">
+					<object class="IBUIButton" id="839437994">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{96, 219}, {128, 106}}</string>
@@ -206,18 +206,18 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIHighlightedTitleColor" ref="579150067"/>
+						<reference key="IBUIHighlightedTitleColor" ref="145103204"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="134555856"/>
+						<reference key="IBUINormalTitleShadowColor" ref="799834069"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">anonymity.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="158487504"/>
-						<reference key="IBUIFont" ref="794855968"/>
+						<reference key="IBUIFontDescription" ref="33572770"/>
+						<reference key="IBUIFont" ref="295158781"/>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 411}}</string>
@@ -252,6 +252,30 @@
 					<int key="connectionID">31</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="414133371"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">41</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="968407757"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">42</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="610246867"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">43</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">registerUser:</string>
 						<reference key="source" ref="335696991"/>
@@ -263,7 +287,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showSavedMediaBrowser</string>
-						<reference key="source" ref="794516815"/>
+						<reference key="source" ref="839437994"/>
 						<reference key="destination" ref="263589821"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -272,7 +296,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showSavedMediaBrowser:</string>
-						<reference key="source" ref="794516815"/>
+						<reference key="source" ref="839437994"/>
 						<reference key="destination" ref="263589821"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -296,7 +320,7 @@
 							<reference ref="610246867"/>
 							<reference ref="968407757"/>
 							<reference ref="335696991"/>
-							<reference ref="794516815"/>
+							<reference ref="839437994"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -354,7 +378,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">34</int>
-						<reference key="object" ref="794516815"/>
+						<reference key="object" ref="839437994"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -378,7 +402,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">40</int>
+			<int key="maxID">43</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -407,25 +431,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/FlipsideViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">PictureView</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">showSavedMediaBrowser</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">showSavedMediaBrowser</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">showSavedMediaBrowser</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/PictureView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
