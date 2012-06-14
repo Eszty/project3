@@ -19,6 +19,11 @@
 
 @synthesize delegate;
 @synthesize back;
+@synthesize firstName;
+@synthesize lastName;
+@synthesize email;
+@synthesize regist;
+@synthesize picButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,6 +62,45 @@
     
 }
 
+- (IBAction)registerUser:(id)sender
+{
+    //TODO: send user information & picture to database
+}
+
+
+- (BOOL) startMediaBrowserFromViewController: (UIViewController*) controller
+                               usingDelegate: (id <UIImagePickerControllerDelegate,
+                                               UINavigationControllerDelegate>) delegate {
+    
+    if (([UIImagePickerController isSourceTypeAvailable:
+          UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
+        || (delegate == nil)
+        || (controller == nil))
+        return NO;
+    
+    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
+    mediaUI.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    
+    // Displays saved pictures and movies, if both are available, from the
+    // Camera Roll album.
+    mediaUI.mediaTypes =
+    [UIImagePickerController availableMediaTypesForSourceType:
+     UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    
+    // Hides the controls for moving & scaling pictures, or for
+    // trimming movies. To instead show the controls, use YES.
+    mediaUI.allowsEditing = NO;
+    
+    mediaUI.delegate = delegate;
+    
+    [controller presentModalViewController: mediaUI animated: YES];
+    return YES;
+}
+
+- (IBAction) showSavedMediaBrowser:(id)sender {
+    [self startMediaBrowserFromViewController: self
+                                usingDelegate: self];
+}
 
 
 

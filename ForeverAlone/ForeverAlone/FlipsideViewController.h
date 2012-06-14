@@ -15,15 +15,27 @@
 @end
 
 
-@interface FlipsideViewController : UIViewController
+@interface FlipsideViewController : UIViewController < UIImagePickerControllerDelegate ,UINavigationControllerDelegate>
+
 
 
 @property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
 
 @property (nonatomic, retain) UIBarButtonItem *back;
+@property (nonatomic, strong) UITextField *firstName;
+@property (nonatomic, strong) UITextField *lastName;
+@property (nonatomic, strong) UITextField *email;
+@property (nonatomic, strong) UIButton *regist;
+@property (nonatomic, strong) UIButton *picButton;
+
 
 - (IBAction)goBack:(id)sender;
+- (IBAction)registerUser:(id)sender;
 
+- (IBAction)showSavedMediaBrowser:(id)sender;
+- (BOOL) startMediaBrowserFromViewController: (UIViewController*) controller
+                               usingDelegate: (id <UIImagePickerControllerDelegate,
+                                               UINavigationControllerDelegate>) delegate;
 
 @end
 
