@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "AppDelegate.h"
+#import "mysql.h"
 
 @interface FirstViewController ()
 
@@ -19,6 +20,7 @@
 @synthesize password;
 @synthesize login;
 @synthesize reg;
+
 
 
 
@@ -73,6 +75,10 @@
     [textField resignFirstResponder]; 
 }
 
+- (void)test
+{
+    //mysql_init(<#MYSQL *mysql#>)
+}
 
 /* Doesn't work, dont know why yet
   * closing keybaord on touch outside the textfield
