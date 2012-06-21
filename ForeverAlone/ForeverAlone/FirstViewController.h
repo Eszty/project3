@@ -11,6 +11,8 @@
 
 @interface FirstViewController : UIViewController <FlipsideViewControllerDelegate, UITextFieldDelegate>
 
+
+@property (unsafe_unretained, nonatomic) IBOutlet id<FlipsideViewControllerDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UITextField *username;
 @property (nonatomic, retain) IBOutlet UITextField *password;
 @property (nonatomic, strong) IBOutlet UIButton *login;
@@ -22,4 +24,5 @@
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
+- (IBAction)test:(id)sender;
 @end

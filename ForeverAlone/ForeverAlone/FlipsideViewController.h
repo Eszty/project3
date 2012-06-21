@@ -19,7 +19,9 @@
 
 
 
-@property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
+//@property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
+
+@property (unsafe_unretained, nonatomic) IBOutlet id<FlipsideViewControllerDelegate> delegate;
 
 @property (nonatomic, retain) UIBarButtonItem *back;
 @property (nonatomic, strong) UITextField *firstName;
