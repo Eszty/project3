@@ -17,8 +17,8 @@
 
 @implementation FirstViewController
 
-@synthesize username;
-@synthesize password;
+@synthesize usernameText;
+@synthesize passwordText;
 @synthesize login;
 @synthesize reg;
 @synthesize delegate;
@@ -77,7 +77,36 @@
     [textField resignFirstResponder]; 
 }
 
-
+- (IBAction)dbTest:(id)sender
+{
+    NSString *name = [NSString stringWithFormat:@"%@", usernameText.text];
+    NSString *pword = [NSString stringWithFormat:@"%@", passwordText.text];
+    
+    NSData *username = [name dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //NSURL *url = [NSURL URLWithString:@"http://sammyo.net/Rusic/index.php/login/register/%@/%@",username, password];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/Rusic/index.php/login/register/%@/%@",name, pword]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:username];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:password];
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    
+    NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    
+    NSLog(@"responseData: %@", dataString);
+    
+    
+}
 
 
 /* Doesn't work, dont know why yet

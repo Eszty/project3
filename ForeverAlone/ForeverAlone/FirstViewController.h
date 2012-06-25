@@ -13,8 +13,8 @@
 
 
 @property (unsafe_unretained, nonatomic) IBOutlet id<FlipsideViewControllerDelegate> delegate;
-@property (nonatomic, retain) IBOutlet UITextField *username;
-@property (nonatomic, retain) IBOutlet UITextField *password;
+@property (nonatomic, retain) IBOutlet UITextField *usernameText;
+@property (nonatomic, retain) IBOutlet UITextField *passwordText;
 @property (nonatomic, strong) IBOutlet UIButton *login;
 @property (nonatomic, strong) IBOutlet UIButton *reg;
 
@@ -24,5 +24,5 @@
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
-- (IBAction)test:(id)sender;
+- (IBAction)dbTest:(id)sender;
 @end
