@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "FlipsideViewController.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface FirstViewController : UIViewController <FlipsideViewControllerDelegate, UITextFieldDelegate>
 
+@property (nonatomic, retain) IBOutlet CLLocationManager *locationManager;
 
 @property (unsafe_unretained, nonatomic) IBOutlet id<FlipsideViewControllerDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UITextField *usernameText;
@@ -24,5 +27,5 @@
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
-- (IBAction)dbTest:(id)sender;
+- (IBAction)userLogin:(id)sender;
 @end

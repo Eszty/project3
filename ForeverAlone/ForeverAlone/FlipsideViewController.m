@@ -9,6 +9,7 @@
 #import "FlipsideViewController.h"
 #import "AppDelegate.h"
 #import "FirstViewController.h"
+#import "DatabaseFunctions.h"
 
 @interface FlipsideViewController ()
 
@@ -21,9 +22,12 @@
 @synthesize back;
 @synthesize firstName;
 @synthesize lastName;
-@synthesize email;
+@synthesize userName;
+@synthesize passWord;
 @synthesize regist;
 @synthesize picButton;
+
+DatabaseFunctions* userDB;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +36,8 @@
         self.title = NSLocalizedString(@"Flipside", @"Flipside");
         self.tabBarItem.image = [UIImage imageNamed:@"flipside"];
     }
+    
+    userDB = [[DatabaseFunctions alloc]init];
     
     return self;
 }
@@ -74,7 +80,6 @@
     
     if (([UIImagePickerController isSourceTypeAvailable:
           UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
-        || (delegate == nil)
         || (controller == nil))
         return NO;
     
@@ -90,8 +95,6 @@
     // Hides the controls for moving & scaling pictures, or for
     // trimming movies. To instead show the controls, use YES.
     mediaUI.allowsEditing = NO;
-    
-    mediaUI.delegate = delegate;
     
     [controller presentModalViewController: mediaUI animated: YES];
     return YES;
@@ -109,6 +112,19 @@
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField {   
     [textField resignFirstResponder]; 
+}
+
+
+- (IBAction)registration:(id)sender
+{
+    NSString* first = [[NSString alloc] initWithFormat:@"%@", firstName.text];
+    NSString* last = [[NSString alloc] initWithFormat:@"%@", lastName.text];
+    NSString* user = [[NSString alloc] initWithFormat:@"%@", userName.text];
+    NSString* pword = [[NSString alloc] initWithFormat:@"%@", passWord.text];
+    
+    //TODO picture!
+    
+    [userDB registerUser:first lastName:last user:user password:pword];
 }
 
 

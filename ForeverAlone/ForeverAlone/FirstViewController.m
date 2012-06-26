@@ -8,8 +8,9 @@
 
 #import "FirstViewController.h"
 #import "AppDelegate.h"
-#import "mysql.h"
-#import "stdio.h"
+#import "DatabaseFunctions.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface FirstViewController ()
 
@@ -22,7 +23,9 @@
 @synthesize login;
 @synthesize reg;
 @synthesize delegate;
+@synthesize locationManager;
 
+DatabaseFunctions* userDB;
 
 
 
@@ -33,13 +36,23 @@
         self.title = NSLocalizedString(@"First", @"First");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
+    
+    userDB = [[DatabaseFunctions alloc]init];
+    
     return self;
 }
 							
 - (void)viewDidLoad
 {
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //locationManager = [[CLLocationManager alloc] init];
+    locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+    //[locationManager startUpdatingLocation];
 }
 
 - (void)viewDidUnload
@@ -77,36 +90,18 @@
     [textField resignFirstResponder]; 
 }
 
-- (IBAction)dbTest:(id)sender
+- (IBAction)userLogin:(id)sender
 {
-    NSString *name = [NSString stringWithFormat:@"%@", usernameText.text];
-    NSString *pword = [NSString stringWithFormat:@"%@", passwordText.text];
     
-    NSData *username = [name dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
+    NSString* name = [[NSString alloc] initWithFormat:@"%@", usernameText.text];
+    NSString* pword = [[NSString alloc] initWithFormat:@"%@", passwordText.text];
     
-    //NSURL *url = [NSURL URLWithString:@"http://sammyo.net/Rusic/index.php/login/register/%@/%@",username, password];
+    [userDB inlog:name passWord:pword];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/Rusic/index.php/login/register/%@/%@",name, pword]];
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:username];
-    
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:password];
-    
-    NSURLResponse *response;
-    NSError *err;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    
-    NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    
-    NSLog(@"responseData: %@", dataString);
-    
-    
+    NSLog(@"Latitude: %@", locationManager.location.coordinate.latitude);
+    NSLog(@"Longitude: %@", locationManager.location.coordinate.longitude);
 }
+
 
 
 /* Doesn't work, dont know why yet

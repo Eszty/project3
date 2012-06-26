@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class FlipsideViewController;
 
@@ -15,7 +15,7 @@
 @end
 
 
-@interface FlipsideViewController : UIViewController < UIImagePickerControllerDelegate ,UINavigationControllerDelegate>
+@interface FlipsideViewController : UIViewController < UIImagePickerControllerDelegate ,UINavigationControllerDelegate, UITextFieldDelegate>
 
 
 
@@ -23,12 +23,13 @@
 
 @property (unsafe_unretained, nonatomic) IBOutlet id<FlipsideViewControllerDelegate> delegate;
 
-@property (nonatomic, retain) UIBarButtonItem *back;
-@property (nonatomic, strong) UITextField *firstName;
-@property (nonatomic, strong) UITextField *lastName;
-@property (nonatomic, strong) UITextField *email;
-@property (nonatomic, strong) UIButton *regist;
-@property (nonatomic, strong) UIButton *picButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
+@property (nonatomic, retain) IBOutlet UITextField *firstName;
+@property (nonatomic, retain) IBOutlet UITextField *lastName;
+@property (nonatomic, retain) IBOutlet UITextField *userName;
+@property (nonatomic, retain) IBOutlet UITextField *passWord;
+@property (nonatomic, strong) IBOutlet UIButton *regist;
+@property (nonatomic, strong) IBOutlet UIButton *picButton;
 
 
 - (IBAction)goBack:(id)sender;
@@ -41,6 +42,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
+- (IBAction)registration:(id)sender;
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event touch:(UITextField*)textField;
 
 

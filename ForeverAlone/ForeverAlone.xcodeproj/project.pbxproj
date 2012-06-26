@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9964B581599AF85002A9EDE /* DatabaseFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9964B571599AF85002A9EDE /* DatabaseFunctions.m */; };
+		C9964B631599FC1F002A9EDE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9964B621599FC1F002A9EDE /* CoreLocation.framework */; };
 		C99E0ECC15914179009F9CA5 /* libmysql.16.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E0ECB15914179009F9CA5 /* libmysql.16.0.0.dylib */; };
 		C9A5EA541585E88700C7B324 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA531585E88700C7B324 /* UIKit.framework */; };
 		C9A5EA561585E88700C7B324 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA551585E88700C7B324 /* Foundation.framework */; };
@@ -50,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9964B561599AF85002A9EDE /* DatabaseFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseFunctions.h; sourceTree = "<group>"; };
+		C9964B571599AF85002A9EDE /* DatabaseFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseFunctions.m; sourceTree = "<group>"; };
+		C9964B621599FC1F002A9EDE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C99E000015911FE8009F9CA5 /* fix_apply.pyo */ = {isa = PBXFileReference; lastKnownFileType = file; path = fix_apply.pyo; sourceTree = "<group>"; };
 		C99E000115911FE8009F9CA5 /* fix_basestring.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = fix_basestring.py; sourceTree = "<group>"; };
 		C99E000215911FE8009F9CA5 /* fix_basestring.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = fix_basestring.pyc; sourceTree = "<group>"; };
@@ -3906,7 +3911,7 @@
 		C99ED59E15911FC9009F9CA5 /* libCoreStorage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libCoreStorage.dylib; sourceTree = "<group>"; };
 		C99ED59F15911FC9009F9CA5 /* libcpp_kext.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcpp_kext.a; sourceTree = "<group>"; };
 		C99ED5A015911FC9009F9CA5 /* libCRFSuite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libCRFSuite.dylib; sourceTree = "<group>"; };
-		C99ED5A115911FC9009F9CA5 /* libCRFSuite0.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = file; path = libCRFSuite0.10.dylib; sourceTree = "<group>"; };
+		C99ED5A115911FC9009F9CA5 /* libCRFSuite0.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libCRFSuite0.10.dylib; sourceTree = "<group>"; };
 		C99ED5A215911FC9009F9CA5 /* libcrypto.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.0.9.7.dylib; sourceTree = "<group>"; };
 		C99ED5A315911FC9009F9CA5 /* libcrypto.0.9.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.0.9.8.dylib; sourceTree = "<group>"; };
 		C99ED5A415911FC9009F9CA5 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.dylib; sourceTree = "<group>"; };
@@ -4007,7 +4012,7 @@
 		C99ED60315911FCA009F9CA5 /* libMatch.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libMatch.1.dylib; sourceTree = "<group>"; };
 		C99ED60415911FCA009F9CA5 /* libMatch.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libMatch.dylib; sourceTree = "<group>"; };
 		C99ED60515911FCA009F9CA5 /* libmecab.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmecab.1.0.0.dylib; sourceTree = "<group>"; };
-		C99ED60615911FCA009F9CA5 /* libmecab.dylib */ = {isa = PBXFileReference; lastKnownFileType = file; path = libmecab.dylib; sourceTree = "<group>"; };
+		C99ED60615911FCA009F9CA5 /* libmecab.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmecab.dylib; sourceTree = "<group>"; };
 		C99ED60715911FCA009F9CA5 /* libmecabra.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmecabra.dylib; sourceTree = "<group>"; };
 		C99ED60815911FCA009F9CA5 /* libmenu.5.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmenu.5.4.dylib; sourceTree = "<group>"; };
 		C99ED60915911FCA009F9CA5 /* libmenu.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmenu.dylib; sourceTree = "<group>"; };
@@ -14563,6 +14568,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9964B631599FC1F002A9EDE /* CoreLocation.framework in Frameworks */,
 				C9A5EA541585E88700C7B324 /* UIKit.framework in Frameworks */,
 				C9A5EA561585E88700C7B324 /* Foundation.framework in Frameworks */,
 				C9A5EA581585E88700C7B324 /* CoreGraphics.framework in Frameworks */,
@@ -32332,6 +32338,7 @@
 		C9A5EA441585E88600C7B324 = {
 			isa = PBXGroup;
 			children = (
+				C9964B621599FC1F002A9EDE /* CoreLocation.framework */,
 				C99E0ECB15914179009F9CA5 /* libmysql.16.0.0.dylib */,
 				C99ED4A715911FC8009F9CA5 /* lib */,
 				C9A5EA591585E88700C7B324 /* ForeverAlone */,
@@ -32372,6 +32379,8 @@
 				C9A5EAAD158620C400C7B324 /* FlipsideViewController.xib */,
 				C9A5EA651585E88700C7B324 /* FirstViewController.h */,
 				C9A5EA661585E88700C7B324 /* FirstViewController.m */,
+				C9964B561599AF85002A9EDE /* DatabaseFunctions.h */,
+				C9964B571599AF85002A9EDE /* DatabaseFunctions.m */,
 				C9A5EA731585E88700C7B324 /* FirstViewController.xib */,
 				C9A5EA681585E88700C7B324 /* first.png */,
 				C9A5EA6A1585E88700C7B324 /* first@2x.png */,
@@ -32557,6 +32566,7 @@
 				C9A5EAA6158613C300C7B324 /* ThirdViewController.m in Sources */,
 				C9A5EAA9158613D300C7B324 /* FourthViewController.m in Sources */,
 				C9A5EAAC1586144800C7B324 /* FlipsideViewController.m in Sources */,
+				C9964B581599AF85002A9EDE /* DatabaseFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
