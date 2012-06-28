@@ -44,12 +44,10 @@ DatabaseFunctions* userDB;
 							
 - (void)viewDidLoad
 {
-    
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //locationManager = [[CLLocationManager alloc] init];
+    locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
     //[locationManager startUpdatingLocation];

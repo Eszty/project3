@@ -24,8 +24,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet id<FlipsideViewControllerDelegate> delegate;
 
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
-@property (nonatomic, retain) IBOutlet UITextField *firstName;
-@property (nonatomic, retain) IBOutlet UITextField *lastName;
+
 @property (nonatomic, retain) IBOutlet UITextField *userName;
 @property (nonatomic, retain) IBOutlet UITextField *passWord;
 @property (nonatomic, strong) IBOutlet UIButton *regist;
@@ -33,7 +32,7 @@
 
 
 - (IBAction)goBack:(id)sender;
-- (IBAction)registerUser:(id)sender;
+
 
 - (IBAction)showSavedMediaBrowser:(id)sender;
 - (BOOL) startMediaBrowserFromViewController: (UIViewController*) controller

@@ -20,8 +20,7 @@
 
 @synthesize delegate;
 @synthesize back;
-@synthesize firstName;
-@synthesize lastName;
+
 @synthesize userName;
 @synthesize passWord;
 @synthesize regist;
@@ -117,14 +116,12 @@ DatabaseFunctions* userDB;
 
 - (IBAction)registration:(id)sender
 {
-    NSString* first = [[NSString alloc] initWithFormat:@"%@", firstName.text];
-    NSString* last = [[NSString alloc] initWithFormat:@"%@", lastName.text];
     NSString* user = [[NSString alloc] initWithFormat:@"%@", userName.text];
     NSString* pword = [[NSString alloc] initWithFormat:@"%@", passWord.text];
     
     //TODO picture!
     
-    [userDB registerUser:first lastName:last user:user password:pword];
+    [userDB registerUser:user password:pword];
 }
 
 
