@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 
-@interface FirstViewController : UIViewController <FlipsideViewControllerDelegate, UITextFieldDelegate>
+@interface FirstViewController : UIViewController <FlipsideViewControllerDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, retain) IBOutlet CLLocationManager *locationManager;
 
@@ -28,4 +28,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 - (IBAction)userLogin:(id)sender;
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation;
 @end

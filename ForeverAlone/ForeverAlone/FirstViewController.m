@@ -48,9 +48,10 @@ DatabaseFunctions* userDB;
 	// Do any additional setup after loading the view, typically from a nib.
     
     locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
-    //[locationManager startUpdatingLocation];
+    [locationManager startUpdatingLocation];
 }
 
 - (void)viewDidUnload
@@ -96,10 +97,32 @@ DatabaseFunctions* userDB;
     
     [userDB inlog:name passWord:pword];
     
-    NSLog(@"Latitude: %@", locationManager.location.coordinate.latitude);
-    NSLog(@"Longitude: %@", locationManager.location.coordinate.longitude);
+    NSLog(@"Latitude: %f", self.locationManager.location.coordinate.latitude);
+    NSLog(@"Longitude: %f", self.locationManager.location.coordinate.longitude);
+    
+    
 }
 
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    int degrees = newLocation.coordinate.latitude;
+    double decimal = fabs(newLocation.coordinate.latitude - degrees);
+    int minutes = decimal * 60;
+    double seconds = decimal * 3600 - minutes * 60;
+    NSString *lat = [NSString stringWithFormat:@"%d° %d' %1.4f\"", 
+                     degrees, minutes, seconds];
+    //NSLog(@"Latitude: %@",lat);
+    degrees = newLocation.coordinate.longitude;
+    decimal = fabs(newLocation.coordinate.longitude - degrees);
+    minutes = decimal * 60;
+    seconds = decimal * 3600 - minutes * 60;
+    NSString *longt = [NSString stringWithFormat:@"%d° %d' %1.4f\"", 
+                       degrees, minutes, seconds];
+    //NSLog(@"Longitude: %@", longt);
+}
 
 
 /* Doesn't work, dont know why yet
