@@ -43,8 +43,9 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 - (IBAction)registration:(id)sender;
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event touch:(UITextField*)textField;
-
-
+//- (void) imagePickerController: (UIImagePickerController *) picker
+ //didFinishPickingMediaWithInfo: (NSDictionary *) info;
+-(IBAction)selectExitingPicture;
 
 @end
 

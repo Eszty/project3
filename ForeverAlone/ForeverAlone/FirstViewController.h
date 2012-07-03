@@ -14,6 +14,7 @@
 @interface FirstViewController : UIViewController <FlipsideViewControllerDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, retain) IBOutlet CLLocationManager *locationManager;
+@property (nonatomic, retain) CLLocation *location;
 
 @property (unsafe_unretained, nonatomic) IBOutlet id<FlipsideViewControllerDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UITextField *usernameText;
@@ -28,7 +29,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 - (IBAction)userLogin:(id)sender;
-- (void)locationManager:(CLLocationManager *)manager
+/*- (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation;
+           fromLocation:(CLLocation *)oldLocation;*/
 @end

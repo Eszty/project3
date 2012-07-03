@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C954AAF115A1BF0C007A7AAB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */; };
 		C9964B581599AF85002A9EDE /* DatabaseFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9964B571599AF85002A9EDE /* DatabaseFunctions.m */; };
 		C9964B631599FC1F002A9EDE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9964B621599FC1F002A9EDE /* CoreLocation.framework */; };
 		C99E0ECC15914179009F9CA5 /* libmysql.16.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E0ECB15914179009F9CA5 /* libmysql.16.0.0.dylib */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C9964B561599AF85002A9EDE /* DatabaseFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseFunctions.h; sourceTree = "<group>"; };
 		C9964B571599AF85002A9EDE /* DatabaseFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseFunctions.m; sourceTree = "<group>"; };
 		C9964B621599FC1F002A9EDE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -14568,6 +14570,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C954AAF115A1BF0C007A7AAB /* MobileCoreServices.framework in Frameworks */,
 				C9964B631599FC1F002A9EDE /* CoreLocation.framework in Frameworks */,
 				C9A5EA541585E88700C7B324 /* UIKit.framework in Frameworks */,
 				C9A5EA561585E88700C7B324 /* Foundation.framework in Frameworks */,
@@ -32338,6 +32341,7 @@
 		C9A5EA441585E88600C7B324 = {
 			isa = PBXGroup;
 			children = (
+				C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */,
 				C9964B621599FC1F002A9EDE /* CoreLocation.framework */,
 				C99E0ECB15914179009F9CA5 /* libmysql.16.0.0.dylib */,
 				C99ED4A715911FC8009F9CA5 /* lib */,

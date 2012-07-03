@@ -24,6 +24,7 @@
 @synthesize reg;
 @synthesize delegate;
 @synthesize locationManager;
+@synthesize location;
 
 DatabaseFunctions* userDB;
 
@@ -48,6 +49,9 @@ DatabaseFunctions* userDB;
 	// Do any additional setup after loading the view, typically from a nib.
     
     locationManager = [[CLLocationManager alloc] init];
+    
+    location = [[CLLocation alloc] initWithLatitude:52.348763 longitude:4.888916];
+    
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
@@ -97,13 +101,13 @@ DatabaseFunctions* userDB;
     
     [userDB inlog:name passWord:pword];
     
-    NSLog(@"Latitude: %f", self.locationManager.location.coordinate.latitude);
-    NSLog(@"Longitude: %f", self.locationManager.location.coordinate.longitude);
+    NSLog(@"Latitude: %f", locationManager.location.coordinate.latitude);
+    NSLog(@"Longitude: %f", locationManager.location.coordinate.longitude);
     
     
 }
 
-
+/*
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
@@ -122,18 +126,8 @@ DatabaseFunctions* userDB;
     NSString *longt = [NSString stringWithFormat:@"%d° %d' %1.4f\"", 
                        degrees, minutes, seconds];
     //NSLog(@"Longitude: %@", longt);
-}
+}*/
 
-
-/* Doesn't work, dont know why yet
-  * closing keybaord on touch outside the textfield
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event touch:(UITextField*)textField
-{
-    [textField resignFirstResponder];
-    //[self.password resignFirstResponder];
-    
-}
-*/
 
 
 

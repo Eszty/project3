@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "FirstViewController.h"
 #import "DatabaseFunctions.h"
+#import <MobileCoreServices/UTCoreTypes.h>
 
 @interface FlipsideViewController ()
 
@@ -27,6 +28,7 @@
 @synthesize picButton;
 
 DatabaseFunctions* userDB;
+UIImagePickerController *mediaUI;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -67,42 +69,33 @@ DatabaseFunctions* userDB;
     
 }
 
-- (IBAction)registerUser:(id)sender
+
+-(IBAction)selectExitingPicture
 {
-    //TODO: send user information & picture to database
+    if([UIImagePickerController isSourceTypeAvailable:
+        UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+        UIImagePickerController *picker= [[UIImagePickerController alloc]init];
+        picker.delegate = self;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentModalViewController:picker animated:YES];
+        [picker release];
+    }
 }
 
 
-- (BOOL) startMediaBrowserFromViewController: (UIViewController*) controller
-                               usingDelegate: (id <UIImagePickerControllerDelegate,
-                                               UINavigationControllerDelegate>) delegate {
-    
-    if (([UIImagePickerController isSourceTypeAvailable:
-          UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
-        || (controller == nil))
-        return NO;
-    
-    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
-    mediaUI.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-    
-    // Displays saved pictures and movies, if both are available, from the
-    // Camera Roll album.
-    mediaUI.mediaTypes =
-    [UIImagePickerController availableMediaTypesForSourceType:
-     UIImagePickerControllerSourceTypeSavedPhotosAlbum];
-    
-    // Hides the controls for moving & scaling pictures, or for
-    // trimming movies. To instead show the controls, use YES.
-    mediaUI.allowsEditing = NO;
-    
-    [controller presentModalViewController: mediaUI animated: YES];
-    return YES;
+-(void)imagePickerController:(UIImagePickerController *)picker
+      didFinishPickingImage : (UIImage *)image
+                 editingInfo:(NSDictionary *)editingInfo
+{
+    [picButton setBackgroundImage:image forState:UIControlStateNormal];
+    [picker dismissModalViewControllerAnimated:YES];
+}
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)  picker
+{
+    [picker dismissModalViewControllerAnimated:YES];
 }
 
-- (IBAction) showSavedMediaBrowser:(id)sender {
-    [self startMediaBrowserFromViewController: self
-                                usingDelegate: self];
-}
 
 //Close keyboard on 'return'
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField {
