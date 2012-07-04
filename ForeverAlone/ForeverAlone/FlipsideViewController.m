@@ -120,7 +120,7 @@ int flag;
     NSString* user = [[NSString alloc] initWithFormat:@"%@", userName.text];
     NSString* pword = [[NSString alloc] initWithFormat:@"%@", passWord.text];
     
-    //TODO picture!
+    //TODO picture!!
     
     if ([userDB registerUser:user password:pword])
     {
