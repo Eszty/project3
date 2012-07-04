@@ -34,7 +34,7 @@ AppDelegate* app;
 {
     [super viewDidLoad];
     app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-	// Do any additional setup after loading the view, typically from a nib.
+	
 }
 
 - (void)viewDidUnload

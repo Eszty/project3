@@ -106,6 +106,12 @@ UIImagePickerController *mediaUI;
     [textField resignFirstResponder]; 
 }
 
+//Close keyboard when tapped outside textfields
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{
+    [self.passWord resignFirstResponder];
+    [self.userName resignFirstResponder];
+}
 
 - (IBAction)registration:(id)sender
 {

@@ -34,10 +34,6 @@
 - (IBAction)goBack:(id)sender;
 
 
-- (IBAction)showSavedMediaBrowser:(id)sender;
-- (BOOL) startMediaBrowserFromViewController: (UIViewController*) controller
-                               usingDelegate: (id <UIImagePickerControllerDelegate,
-                                               UINavigationControllerDelegate>) delegate;
 
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
