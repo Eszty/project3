@@ -10,4 +10,8 @@
 
 @interface SecondViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UINavigationBar *navigation;
+
+- (void)viewWillAppear:(BOOL)animated;
+
 @end

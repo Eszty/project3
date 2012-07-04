@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "AppDelegate.h"
 
 @interface SecondViewController ()
 
@@ -14,11 +15,16 @@
 
 @implementation SecondViewController
 
+@synthesize navigation;
+
+AppDelegate* app;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
+        self.title = NSLocalizedString(@"Chat", @"Chat");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;
@@ -27,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -40,5 +47,13 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    navigation.topItem.title = app.userName;
+}
+
+
 
 @end

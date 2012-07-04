@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "DatabaseFunctions.h"
 #import <CoreLocation/CoreLocation.h>
+#import "SecondViewController.h"
 
 
 @interface FirstViewController ()
@@ -27,6 +28,7 @@
 @synthesize location;
 
 DatabaseFunctions* userDB;
+AppDelegate *app;
 
 
 
@@ -34,7 +36,7 @@ DatabaseFunctions* userDB;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
+        self.title = NSLocalizedString(@"Login", @"Login");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     
@@ -46,6 +48,9 @@ DatabaseFunctions* userDB;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     
     locationManager = [[CLLocationManager alloc] init];
@@ -61,8 +66,10 @@ DatabaseFunctions* userDB;
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
     // Release any retained subviews of the main view.
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -93,19 +100,55 @@ DatabaseFunctions* userDB;
     [textField resignFirstResponder]; 
 }
 
+
+//Login function
 - (IBAction)userLogin:(id)sender
 {
-    
+    //Get user input
     NSString* name = [[NSString alloc] initWithFormat:@"%@", usernameText.text];
     NSString* pword = [[NSString alloc] initWithFormat:@"%@", passwordText.text];
     
-    [userDB inlog:name passWord:pword];
+    //If login is succesful, switch to chat view
+    if ([userDB inlog:name passWord:pword] == YES)
+    {
+        //Change title of navigation bar to username
+        app.userName = name;
+        SecondViewController *second = [[SecondViewController alloc]init];
+        [second viewWillAppear:YES];
+        
+        //Close keyboard
+        [self textFieldShouldReturn:passwordText];
+        [self textFieldShouldReturn:usernameText];
+        
+        //Switch to chat
+        [self.tabBarController setSelectedIndex:1];
+        
+    }
+    //Else show alert
+    else {
+        UIAlertView *fail = [[UIAlertView alloc] initWithTitle:@"Not logged in" 
+                                                        message:@"Username or password invalid" 
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"OK", nil];
+        [fail show]; 
+        
+    }
     
+    //Log location (returns San Francisco ??)
     NSLog(@"Latitude: %f", locationManager.location.coordinate.latitude);
     NSLog(@"Longitude: %f", locationManager.location.coordinate.longitude);
     
     
 }
+
+//Close keyboard when tapped outside textfields
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{
+    [self.passwordText resignFirstResponder];
+    [self.usernameText resignFirstResponder];
+}
+
 
 /*
 - (void)locationManager:(CLLocationManager *)manager

@@ -13,7 +13,7 @@
 
 @property (nonatomic, retain) IBOutlet CLLocationManager *locationManager;
 
-- (void)inlog:(NSString*)name passWord:(NSString*)pword;
+- (BOOL)inlog:(NSString*)name passWord:(NSString*)pword;
 //- (void)registerUser:(NSString*)firstName surName:(NSString*)surName userName:(NSString*)username passWord:(NSString*)password;
 - (void)registerUser:(NSString*)loginName password:(NSString*)pword;
 
