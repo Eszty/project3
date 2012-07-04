@@ -11,7 +11,9 @@
 @interface SecondViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UINavigationBar *navigation;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
 
 - (void)viewWillAppear:(BOOL)animated;
+- (IBAction)goBack:(id)sender;
 
 @end

@@ -109,7 +109,7 @@ AppDelegate *app;
     NSString* pword = [[NSString alloc] initWithFormat:@"%@", passwordText.text];
     
     //If login is succesful, switch to chat view
-    if ([userDB inlog:name passWord:pword] == YES)
+    if ([userDB inlog:name passWord:pword])
     {
         //Change title of navigation bar to username
         app.userName = name;

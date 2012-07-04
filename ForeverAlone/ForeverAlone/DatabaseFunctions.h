@@ -15,6 +15,6 @@
 
 - (BOOL)inlog:(NSString*)name passWord:(NSString*)pword;
 //- (void)registerUser:(NSString*)firstName surName:(NSString*)surName userName:(NSString*)username passWord:(NSString*)password;
-- (void)registerUser:(NSString*)loginName password:(NSString*)pword;
+- (BOOL)registerUser:(NSString*)loginName password:(NSString*)pword;
 
 @end

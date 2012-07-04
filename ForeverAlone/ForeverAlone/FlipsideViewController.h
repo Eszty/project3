@@ -15,7 +15,7 @@
 @end
 
 
-@interface FlipsideViewController : UIViewController < UIImagePickerControllerDelegate ,UINavigationControllerDelegate, UITextFieldDelegate>
+@interface FlipsideViewController : UIViewController < UIImagePickerControllerDelegate ,UINavigationControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate>
 
 
 
@@ -32,6 +32,8 @@
 
 
 - (IBAction)goBack:(id)sender;
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 
 

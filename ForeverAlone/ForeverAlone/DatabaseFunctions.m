@@ -60,7 +60,7 @@
 
 //BUG: wordt twee keer aangeroepen Why?!? Don't get it...
 //TODO: add picture (HOW?)
-- (void)registerUser:(NSString*)loginName password:(NSString*)pword
+- (BOOL)registerUser:(NSString*)loginName password:(NSString*)pword
 {
     NSData *username = [loginName dataUsingEncoding:NSUTF8StringEncoding];
     NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
@@ -82,6 +82,18 @@
     NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
     
     NSLog(@"responseData: %@", dataString);
+    
+    //Check if registration succesful
+    NSString *searchString = @"unsuccesfull";
+    
+    NSRange range = [dataString rangeOfString:searchString];
+    
+    if (range.location == NSNotFound) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
     
 }
 

@@ -16,6 +16,7 @@
 @implementation SecondViewController
 
 @synthesize navigation;
+@synthesize back;
 
 AppDelegate* app;
 
@@ -53,6 +54,14 @@ AppDelegate* app;
     [super viewWillAppear:animated];
     navigation.topItem.title = app.userName;
 }
+
+//Go back to login
+- (IBAction)goBack:(id)sender
+{
+    [self.tabBarController setSelectedIndex:0];
+    
+}
+
 
 
 

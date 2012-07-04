@@ -30,6 +30,8 @@
 DatabaseFunctions* userDB;
 UIImagePickerController *mediaUI;
 
+int flag;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -120,10 +122,38 @@ UIImagePickerController *mediaUI;
     
     //TODO picture!
     
-    [userDB registerUser:user password:pword];
+    if ([userDB registerUser:user password:pword])
+    {
+        UIAlertView *registered = [[UIAlertView alloc] initWithTitle:@"You're registered" 
+                                                       message:@"You can now log in" 
+                                                      delegate:self
+                                             cancelButtonTitle:@"Quit"
+                                             otherButtonTitles:@"OK", nil];
+        [registered show]; 
+        
+    }
+    else {
+        UIAlertView *fail = [[UIAlertView alloc] initWithTitle:@"Registration failed" 
+                                                             message:@"Invalid username" 
+                                                            delegate:self
+                                                   cancelButtonTitle:@"Quit"
+                                                   otherButtonTitles:@"OK", nil];
+        [fail show]; 
+    }
 }
 
-
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    //If user clicked OK go to login
+    if (buttonIndex == 1)
+    {
+        [self.delegate flipsideViewControllerDidFinish:self];    
+    }
+    //Else quit application
+    else
+    {
+        exit(0);
+    }
+}
 
 
 
