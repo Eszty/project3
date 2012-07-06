@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+/****** Class for registration ******/
+
 #import "FlipsideViewController.h"
 #import "AppDelegate.h"
 #import "FirstViewController.h"
@@ -30,8 +32,6 @@
 DatabaseFunctions* userDB;
 UIImagePickerController *mediaUI;
 
-int flag;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,6 +40,7 @@ int flag;
         self.tabBarItem.image = [UIImage imageNamed:@"flipside"];
     }
     
+    //Initiate DabaseFunctions object
     userDB = [[DatabaseFunctions alloc]init];
     
     return self;
@@ -48,14 +49,12 @@ int flag;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -65,13 +64,14 @@ int flag;
 
 #pragma mark - Actions
 
+//Back button action
 - (IBAction)goBack:(id)sender
 {
     [self.delegate flipsideViewControllerDidFinish:self];
     
 }
 
-
+//Select picture from library
 -(IBAction)selectExitingPicture
 {
     if([UIImagePickerController isSourceTypeAvailable:
@@ -85,7 +85,7 @@ int flag;
     }
 }
 
-
+//Controller for image picker
 -(void)imagePickerController:(UIImagePickerController *)picker
       didFinishPickingImage : (UIImage *)image
                  editingInfo:(NSDictionary *)editingInfo
@@ -115,13 +115,17 @@ int flag;
     [self.userName resignFirstResponder];
 }
 
+//Registration button action
 - (IBAction)registration:(id)sender
 {
+    //get user input
     NSString* user = [[NSString alloc] initWithFormat:@"%@", userName.text];
     NSString* pword = [[NSString alloc] initWithFormat:@"%@", passWord.text];
     
     //TODO picture!!
     
+    //Send user input to server
+    //If registration succesful, user can log in or quit the application
     if ([userDB registerUser:user password:pword])
     {
         UIAlertView *registered = [[UIAlertView alloc] initWithTitle:@"You're registered" 
@@ -142,6 +146,7 @@ int flag;
     }
 }
 
+//Function for controlling alert buttons
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     //If user clicked OK go to login
     if (buttonIndex == 1)

@@ -18,13 +18,8 @@
 @interface FlipsideViewController : UIViewController < UIImagePickerControllerDelegate ,UINavigationControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate>
 
 
-
-//@property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
-
 @property (unsafe_unretained, nonatomic) IBOutlet id<FlipsideViewControllerDelegate> delegate;
-
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
-
 @property (nonatomic, retain) IBOutlet UITextField *userName;
 @property (nonatomic, retain) IBOutlet UITextField *passWord;
 @property (nonatomic, strong) IBOutlet UIButton *regist;
@@ -32,17 +27,11 @@
 
 
 - (IBAction)goBack:(id)sender;
-
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
-
-
 
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 - (IBAction)registration:(id)sender;
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event touch:(UITextField*)textField;
-//- (void) imagePickerController: (UIImagePickerController *) picker
- //didFinishPickingMediaWithInfo: (NSDictionary *) info;
 -(IBAction)selectExitingPicture;
 
 @end

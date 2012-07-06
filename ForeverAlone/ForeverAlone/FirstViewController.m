@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+/***** Controller class for inlog page ******/
+
 #import "FirstViewController.h"
 #import "AppDelegate.h"
 #import "DatabaseFunctions.h"
@@ -41,6 +43,7 @@ AppDelegate *app;
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     
+    //Create instance of DatabaseFunctions class
     userDB = [[DatabaseFunctions alloc]init];
     
     return self;
@@ -49,15 +52,13 @@ AppDelegate *app;
 - (void)viewDidLoad
 {
     
-    
     app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
         
+    //Initiate location manager
     locationManager = [[CLLocationManager alloc] init];
-    
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
-    //[locationManager startUpdatingLocation];
     startLocation = nil;
     
     [super viewDidLoad];
@@ -67,8 +68,6 @@ AppDelegate *app;
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    
-    // Release any retained subviews of the main view.
 }
 
 
@@ -77,8 +76,8 @@ AppDelegate *app;
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-#pragma mark - Flipside View
-
+//Action for register button
+//Switch to flipside (registration)
 - (IBAction)regist:(id)sender
 {
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideViewController" bundle:nil];
@@ -99,6 +98,13 @@ AppDelegate *app;
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField {   
     [textField resignFirstResponder]; 
+}
+
+//Close keyboard when tapped outside textfields
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{
+    [self.passwordText resignFirstResponder];
+    [self.usernameText resignFirstResponder];
 }
 
 
@@ -139,27 +145,13 @@ AppDelegate *app;
         
     }
     
-    //Delete text
+    //Delete text from textfields
     usernameText.text = @"";
     passwordText.text = @"";
     
-    //Log location (returns San Francisco ??)
-    //NSLog(@"Latitude: %f", locationManager.location.coordinate.latitude);
-    //NSLog(@"Longitude: %f", locationManager.location.coordinate.longitude);
-    
-    
 }
 
-//Close keyboard when tapped outside textfields
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
-{
-    [self.passwordText resignFirstResponder];
-    [self.usernameText resignFirstResponder];
-}
-
-
-
-
+//Function for getting the location
 -(void)locationManager:(CLLocationManager *)manager
    didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation
@@ -167,27 +159,18 @@ AppDelegate *app;
     NSString *currentLatitude = [[NSString alloc] 
                                  initWithFormat:@"%g", 
                                  newLocation.coordinate.latitude];
-    NSLog(@"Latitude: %@", currentLatitude);
+    NSLog(@"Latitude: %@", currentLatitude); //Print current latitude
     
     NSString *currentLongitude = [[NSString alloc] 
                                   initWithFormat:@"%g",
                                   newLocation.coordinate.longitude];
-    NSLog(@"Longitude: %@", currentLongitude);
+    NSLog(@"Longitude: %@", currentLongitude); //Print current longitude
     
     
     
     [currentLatitude release];
     [currentLongitude release];
 }
-
--(void)locationManager:(CLLocationManager *)manager 
-      didFailWithError:(NSError *)error
-{
-}
-
-
-
-
 
 
 

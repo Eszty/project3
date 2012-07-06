@@ -25,13 +25,9 @@
 @property (nonatomic, retain) CLLocation *startLocation;
 
 
-
 - (IBAction)regist:(id)sender;
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (BOOL)textFieldShouldReturn:(UITextField *) theTextField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 - (IBAction)userLogin:(id)sender;
-/*- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation;*/
+
 @end
