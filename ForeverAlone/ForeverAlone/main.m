@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
-#import "mysql.h"
+
 #import "stdio.h"
 
 int main(int argc, char *argv[])

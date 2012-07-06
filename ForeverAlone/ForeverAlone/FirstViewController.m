@@ -26,6 +26,7 @@
 @synthesize delegate;
 @synthesize locationManager;
 @synthesize location;
+@synthesize startLocation;
 
 DatabaseFunctions* userDB;
 AppDelegate *app;
@@ -47,20 +48,20 @@ AppDelegate *app;
 							
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    
     
     app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    
-	// Do any additional setup after loading the view, typically from a nib.
-    
+        
     locationManager = [[CLLocationManager alloc] init];
-    
-    location = [[CLLocation alloc] initWithLatitude:52.348763 longitude:4.888916];
     
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
-    [locationManager startUpdatingLocation];
+    //[locationManager startUpdatingLocation];
+    startLocation = nil;
+    
+    [super viewDidLoad];
+    
 }
 
 - (void)viewDidUnload
@@ -108,10 +109,10 @@ AppDelegate *app;
     NSString* name = [[NSString alloc] initWithFormat:@"%@", usernameText.text];
     NSString* pword = [[NSString alloc] initWithFormat:@"%@", passwordText.text];
     
-    //If login is succesful, switch to chat view
+    //If login is succesful...
     if ([userDB inlog:name passWord:pword])
     {
-        //Change title of navigation bar to username
+        //Change title of navigation bar (chat window) to username
         app.userName = name;
         SecondViewController *second = [[SecondViewController alloc]init];
         [second viewWillAppear:YES];
@@ -122,6 +123,9 @@ AppDelegate *app;
         
         //Switch to chat
         [self.tabBarController setSelectedIndex:1];
+        
+        //Start getting location
+        [locationManager startUpdatingLocation];
         
     }
     //Else show alert
@@ -135,9 +139,13 @@ AppDelegate *app;
         
     }
     
+    //Delete text
+    usernameText.text = @"";
+    passwordText.text = @"";
+    
     //Log location (returns San Francisco ??)
-    NSLog(@"Latitude: %f", locationManager.location.coordinate.latitude);
-    NSLog(@"Longitude: %f", locationManager.location.coordinate.longitude);
+    //NSLog(@"Latitude: %f", locationManager.location.coordinate.latitude);
+    //NSLog(@"Longitude: %f", locationManager.location.coordinate.longitude);
     
     
 }
@@ -150,26 +158,32 @@ AppDelegate *app;
 }
 
 
-/*
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
+
+
+-(void)locationManager:(CLLocationManager *)manager
+   didUpdateToLocation:(CLLocation *)newLocation
+          fromLocation:(CLLocation *)oldLocation
 {
-    int degrees = newLocation.coordinate.latitude;
-    double decimal = fabs(newLocation.coordinate.latitude - degrees);
-    int minutes = decimal * 60;
-    double seconds = decimal * 3600 - minutes * 60;
-    NSString *lat = [NSString stringWithFormat:@"%d° %d' %1.4f\"", 
-                     degrees, minutes, seconds];
-    //NSLog(@"Latitude: %@",lat);
-    degrees = newLocation.coordinate.longitude;
-    decimal = fabs(newLocation.coordinate.longitude - degrees);
-    minutes = decimal * 60;
-    seconds = decimal * 3600 - minutes * 60;
-    NSString *longt = [NSString stringWithFormat:@"%d° %d' %1.4f\"", 
-                       degrees, minutes, seconds];
-    //NSLog(@"Longitude: %@", longt);
-}*/
+    NSString *currentLatitude = [[NSString alloc] 
+                                 initWithFormat:@"%g", 
+                                 newLocation.coordinate.latitude];
+    NSLog(@"Latitude: %@", currentLatitude);
+    
+    NSString *currentLongitude = [[NSString alloc] 
+                                  initWithFormat:@"%g",
+                                  newLocation.coordinate.longitude];
+    NSLog(@"Longitude: %@", currentLongitude);
+    
+    
+    
+    [currentLatitude release];
+    [currentLongitude release];
+}
+
+-(void)locationManager:(CLLocationManager *)manager 
+      didFailWithError:(NSError *)error
+{
+}
 
 
 

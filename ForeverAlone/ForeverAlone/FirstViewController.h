@@ -22,6 +22,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *login;
 @property (nonatomic, strong) IBOutlet UIButton *reg;
 
+@property (nonatomic, retain) CLLocation *startLocation;
+
 
 
 - (IBAction)regist:(id)sender;

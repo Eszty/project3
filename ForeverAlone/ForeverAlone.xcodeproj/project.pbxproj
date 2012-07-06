@@ -32689,6 +32689,7 @@
 				);
 				IBC_PLUGIN_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "ForeverAlone/ForeverAlone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/mysql/lib,
 					"$(inherited)",
@@ -32717,6 +32718,7 @@
 				);
 				IBC_PLUGIN_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "ForeverAlone/ForeverAlone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/mysql/lib,
 					"$(inherited)",
