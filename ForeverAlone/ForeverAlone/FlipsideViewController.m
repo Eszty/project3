@@ -31,6 +31,7 @@
 
 DatabaseFunctions* userDB;
 UIImagePickerController *mediaUI;
+UIImage* avatarImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -90,6 +91,7 @@ UIImagePickerController *mediaUI;
       didFinishPickingImage : (UIImage *)image
                  editingInfo:(NSDictionary *)editingInfo
 {
+    avatarImage = image;
     [picButton setBackgroundImage:image forState:UIControlStateNormal];
     [picker dismissModalViewControllerAnimated:YES];
 }
@@ -120,13 +122,14 @@ UIImagePickerController *mediaUI;
 {
     //get user input
     NSString* user = [[NSString alloc] initWithFormat:@"%@", userName.text];
-    NSString* pword = [[NSString alloc] initWithFormat:@"%@", passWord.text];
+    NSString* pword = [[NSString alloc] initWithFormat:@"%@", passWord.text];    
+    NSData* imagedata = UIImagePNGRepresentation(avatarImage);
     
     //TODO picture!!
     
     //Send user input to server
     //If registration succesful, user can log in or quit the application
-    if ([userDB registerUser:user password:pword])
+    if ([userDB registerUser:user password:pword image:imagedata])
     {
         UIAlertView *registered = [[UIAlertView alloc] initWithTitle:@"You're registered" 
                                                        message:@"You can now log in" 

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A57C006F15F4E6F700891F8D /* libmysqlclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A57C006E15F4E6F700891F8D /* libmysqlclient.a */; };
 		C954AAF115A1BF0C007A7AAB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */; };
 		C9964B581599AF85002A9EDE /* DatabaseFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9964B571599AF85002A9EDE /* DatabaseFunctions.m */; };
 		C9964B631599FC1F002A9EDE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9964B621599FC1F002A9EDE /* CoreLocation.framework */; };
-		C99E0ECC15914179009F9CA5 /* libmysql.16.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E0ECB15914179009F9CA5 /* libmysql.16.0.0.dylib */; };
 		C9A5EA541585E88700C7B324 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA531585E88700C7B324 /* UIKit.framework */; };
 		C9A5EA561585E88700C7B324 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA551585E88700C7B324 /* Foundation.framework */; };
 		C9A5EA581585E88700C7B324 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5EA571585E88700C7B324 /* CoreGraphics.framework */; };
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A57C006E15F4E6F700891F8D /* libmysqlclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmysqlclient.a; path = ForeverAlone/libmysqlclient.a; sourceTree = "<group>"; };
 		C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C9964B561599AF85002A9EDE /* DatabaseFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseFunctions.h; sourceTree = "<group>"; };
 		C9964B571599AF85002A9EDE /* DatabaseFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseFunctions.m; sourceTree = "<group>"; };
@@ -3683,7 +3684,6 @@
 		C99E0EC015911FF4009F9CA5 /* zpty.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = zpty.so; sourceTree = "<group>"; };
 		C99E0EC115911FF4009F9CA5 /* zselect.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = zselect.so; sourceTree = "<group>"; };
 		C99E0EC215911FF4009F9CA5 /* zutil.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = zutil.so; sourceTree = "<group>"; };
-		C99E0ECB15914179009F9CA5 /* libmysql.16.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmysql.16.0.0.dylib; path = /usr/local/mysql/lib/libmysql.16.0.0.dylib; sourceTree = "<absolute>"; };
 		C99ED4A915911FC8009F9CA5 /* libarclite_macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libarclite_macosx.a; sourceTree = "<group>"; };
 		C99ED4AA15911FC8009F9CA5 /* bundle1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = bundle1.o; sourceTree = "<group>"; };
 		C99ED4AD15911FC8009F9CA5 /* __bit_reference */ = {isa = PBXFileReference; lastKnownFileType = text; path = __bit_reference; sourceTree = "<group>"; };
@@ -14565,7 +14565,7 @@
 				C9A5EA541585E88700C7B324 /* UIKit.framework in Frameworks */,
 				C9A5EA561585E88700C7B324 /* Foundation.framework in Frameworks */,
 				C9A5EA581585E88700C7B324 /* CoreGraphics.framework in Frameworks */,
-				C99E0ECC15914179009F9CA5 /* libmysql.16.0.0.dylib in Frameworks */,
+				A57C006F15F4E6F700891F8D /* libmysqlclient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32331,9 +32331,9 @@
 		C9A5EA441585E88600C7B324 = {
 			isa = PBXGroup;
 			children = (
+				A57C006E15F4E6F700891F8D /* libmysqlclient.a */,
 				C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */,
 				C9964B621599FC1F002A9EDE /* CoreLocation.framework */,
-				C99E0ECB15914179009F9CA5 /* libmysql.16.0.0.dylib */,
 				C99ED4A715911FC8009F9CA5 /* lib */,
 				C9A5EA591585E88700C7B324 /* ForeverAlone */,
 				C9A5EA851585E88700C7B324 /* ForeverAloneTests */,
@@ -32366,9 +32366,9 @@
 			isa = PBXGroup;
 			children = (
 				C9A5EAB31588B89700C7B324 /* anonymity.png */,
-				C9A5EA621585E88700C7B324 /* AppDelegate.h */,
 				C9A5EA631585E88700C7B324 /* AppDelegate.m */,
 				C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */,
+				C9A5EA621585E88700C7B324 /* AppDelegate.h */,
 				C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */,
 				C9A5EAAD158620C400C7B324 /* FlipsideViewController.xib */,
 				C9A5EA651585E88700C7B324 /* FirstViewController.h */,
@@ -32693,6 +32693,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/mysql/lib,
 					"$(inherited)",
+					"\"$(SRCROOT)/ForeverAlone\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lmysqlclient",
@@ -32722,6 +32723,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/mysql/lib,
 					"$(inherited)",
+					"\"$(SRCROOT)/ForeverAlone\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lmysqlclient",
