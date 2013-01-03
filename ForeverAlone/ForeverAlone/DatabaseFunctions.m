@@ -25,15 +25,16 @@
     //Get user input
     NSData *username = [name dataUsingEncoding:NSUTF8StringEncoding];
     NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"login username %@ pwd %@", username, password);
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/login.php"]];
     
     //Send request to URL
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:username];
+    [request setHTTPBody:name];
     [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:password];
+    [request setHTTPBody:pword];
     
     //Get response from server
     NSURLResponse *response;
