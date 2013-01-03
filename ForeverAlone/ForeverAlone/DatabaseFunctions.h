@@ -13,7 +13,7 @@
 @interface DatabaseFunctions : NSObject
 
 
-- (BOOL)inlog:(NSString*)name passWord:(NSString*)pword;
-- (BOOL)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)avatarImage;
+- (NSString*)inlog:(NSString*)name passWord:(NSString*)pword;
+- (NSString*)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)avatarImage;
 
 @end

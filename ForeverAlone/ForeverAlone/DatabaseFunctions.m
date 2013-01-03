@@ -20,13 +20,13 @@
 
 
 //Check username and password to login. 
-- (BOOL)inlog:(NSString*)name passWord:(NSString*)pword
+- (NSString*)inlog:(NSString*)name passWord:(NSString*)pword
 {
     //Get user input
     NSData *username = [name dataUsingEncoding:NSUTF8StringEncoding];
     NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/Rusic/index.php/login/login_function/%@/%@",name, pword]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/login.php"]];
     
     //Send request to URL
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -40,32 +40,32 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    NSLog(@"response from server: %@", dataString);
+
     
-    //Check if login succesful
-    NSString *searchString = @"unsuccesfull";
+    /* Check if login was successful */
+    NSString* error_found = @"no_error";
+    NSString *searchString = @"wrong_password";
     NSRange range = [dataString rangeOfString:searchString];
     
-    //Return YES if login is succesful else NO
-    if (range.location == NSNotFound) {
-        return YES;
+    if (range.location != NSNotFound) {
+        error_found = @"Wrong password provided";
     }
-    else {
-        return NO;
+    
+    searchString = @"wrong_user_pass";
+    range = [dataString rangeOfString:searchString];
+    
+    if (range.location != NSNotFound) {
+        error_found = @"Wrong username and/or password";
     }
+    return error_found;
 }
 
 
-//TODO: add picture (HOW?)
 //Registration function
-- (BOOL)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)imageData
-{
-    //Get user input
-    //NSData *username = [loginName dataUsingEncoding:NSUTF8StringEncoding];
-    //NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
-    
+- (NSString*)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)imageData
+{  
     NSString *post = [NSString stringWithFormat:@"username=%@&password=%@", loginName, pword];
-    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/register.php"]];
     
     // create request
@@ -124,18 +124,41 @@
     NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
     NSLog(@"response from server: %@", dataString);
     
-    //Check if registration succesful
-    NSString *searchString = @"HTTP status 200";
+    /* Check if login was successful */
+    NSString *error_found = @"no_error";
+    /* Look for empty username/password error */
+    NSString *searchString = @"no_username_or_password";
     NSRange range = [dataString rangeOfString:searchString];
     
-    //Return YES if registration is succesful, else NO
-    if (range.location == NSNotFound) {
-        return YES;
-    }
-    else {
-        return NO;
+    if (range.location != NSNotFound) {
+        error_found = @"Please provide a username and password.";
     }
     
+    /* Check if username is already taken */
+    searchString = @"username_taken";
+    range = [dataString rangeOfString:searchString];
+    
+    if (range.location != NSNotFound) {
+        error_found = @"This username has already been taken. Please choose another one.";
+    }
+    
+    /* Check if username is of invalid length */
+    searchString = @"username_invalid_length";
+    range = [dataString rangeOfString:searchString];
+    
+    if (range.location != NSNotFound) {
+        error_found = @"Username must be between 4 and 30 characters.";
+    }
+    
+    /* Check if avatar image was received and saved */
+    searchString = @"no_image received";
+    range = [dataString rangeOfString:searchString];
+    
+    if (range.location != NSNotFound) {
+        error_found = @"no_image";
+    }
+    
+    return error_found;    
 }
 
 @end

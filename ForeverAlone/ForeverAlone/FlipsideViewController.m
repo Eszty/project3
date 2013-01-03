@@ -125,23 +125,32 @@ UIImage* avatarImage;
     NSString* pword = [[NSString alloc] initWithFormat:@"%@", passWord.text];    
     NSData* imagedata = UIImagePNGRepresentation(avatarImage);
     
-    //TODO picture!!
-    
     //Send user input to server
     //If registration succesful, user can log in or quit the application
-    if ([userDB registerUser:user password:pword image:imagedata])
+    NSString *registered = [userDB registerUser:user password:pword image:imagedata];
+    if ([registered isEqualToString:@"no_error"])
     {
         UIAlertView *registered = [[UIAlertView alloc] initWithTitle:@"You're registered" 
-                                                       message:@"You can now log in" 
+                                                       message:@"You can now log in"
                                                       delegate:self
                                              cancelButtonTitle:@"Quit"
                                              otherButtonTitles:@"OK", nil];
         [registered show]; 
         
     }
+    else if ([registered isEqualToString:@"no_image"])
+    {
+        UIAlertView *registered = [[UIAlertView alloc] initWithTitle:@"You're registered"
+                                                             message:@"You can now log in, but you didn't submit an avatar image."
+                                                            delegate:self
+                                                   cancelButtonTitle:@"Quit"
+                                                   otherButtonTitles:@"OK", nil];
+        [registered show];
+        
+    }
     else {
         UIAlertView *fail = [[UIAlertView alloc] initWithTitle:@"Registration failed" 
-                                                             message:@"Invalid username" 
+                                                             message:registered
                                                             delegate:self
                                                    cancelButtonTitle:@"Quit"
                                                    otherButtonTitles:@"OK", nil];

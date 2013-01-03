@@ -115,8 +115,9 @@ AppDelegate *app;
     NSString* name = [[NSString alloc] initWithFormat:@"%@", usernameText.text];
     NSString* pword = [[NSString alloc] initWithFormat:@"%@", passwordText.text];
     
-    //If login is succesful...
-    if ([userDB inlog:name passWord:pword])
+    //If login is succesful...    
+    NSString *registered = [userDB inlog:name passWord:pword];
+    if ([registered isEqualToString:@"no_error"])
     {
         //Change title of navigation bar (chat window) to username
         app.userName = name;
@@ -137,7 +138,7 @@ AppDelegate *app;
     //Else show alert
     else {
         UIAlertView *fail = [[UIAlertView alloc] initWithTitle:@"Not logged in" 
-                                                        message:@"Username or password invalid" 
+                                                        message:registered
                                                        delegate:nil
                                               cancelButtonTitle:@"Cancel"
                                               otherButtonTitles:@"OK", nil];
