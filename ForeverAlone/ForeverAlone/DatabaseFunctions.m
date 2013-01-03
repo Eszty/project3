@@ -60,10 +60,10 @@
 - (BOOL)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)imageData
 {
     //Get user input
-    NSData *username = [loginName dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
+    //NSData *username = [loginName dataUsingEncoding:NSUTF8StringEncoding];
+    //NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSString *post = [NSString stringWithFormat:@"username=%@&password=%@", username, password];
+    NSString *post = [NSString stringWithFormat:@"username=%@&password=%@", loginName, pword];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/register.php"]];
@@ -87,13 +87,13 @@
     // append username
     [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"username\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[[NSString stringWithFormat:@"%@\r\n", username] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", loginName] dataUsingEncoding:NSUTF8StringEncoding]];
     
     //append password
     
     [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"password\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[[NSString stringWithFormat:@"%@\r\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", pword] dataUsingEncoding:NSUTF8StringEncoding]];
     
     // add image data
     if (imageData) {
@@ -125,7 +125,7 @@
     NSLog(@"response from server: %@", dataString);
     
     //Check if registration succesful
-    NSString *searchString = @"unsuccesfull";
+    NSString *searchString = @"HTTP status 200";
     NSRange range = [dataString rangeOfString:searchString];
     
     //Return YES if registration is succesful, else NO
