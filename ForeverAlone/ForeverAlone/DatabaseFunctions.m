@@ -21,28 +21,51 @@
 
 //Check username and password to login. 
 - (NSString*)inlog:(NSString*)name passWord:(NSString*)pword
-{
-    //Get user input
-    NSData *username = [name dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *password = [pword dataUsingEncoding:NSUTF8StringEncoding];
-    NSLog(@"login username %@ pwd %@", username, password);
-    
+{    
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/login.php"]];
     
-    //Send request to URL
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    // create request
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    [request setHTTPShouldHandleCookies:NO];
+    [request setTimeoutInterval:30];
     [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:name];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:pword];
+    
+    // set Content-Type in HTTP header
+    NSString* boundary = @"akljsdflkadsfjfd";
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
+    [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
+    
+    // post body
+    NSMutableData *body = [NSMutableData data];
+    
+    // append username
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"username\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", name] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //append password
+    
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"password\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", pword] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    // setting the body of the post to the reqeust
+    [request setHTTPBody:body];
+    
+    // set the content-length
+    NSString *postLength = [NSString stringWithFormat:@"%d", [body length]];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    
+    // set URL
+    [request setURL:url];
     
     //Get response from server
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(@"response from server: %@", dataString);
-
+    //NSLog(@"response from server: %@", dataString);
     
     /* Check if login was successful */
     NSString* error_found = @"no_error";
@@ -66,7 +89,6 @@
 //Registration function
 - (NSString*)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)imageData
 {  
-    NSString *post = [NSString stringWithFormat:@"username=%@&password=%@", loginName, pword];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/register.php"]];
     
     // create request
@@ -123,7 +145,7 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(@"response from server: %@", dataString);
+    //NSLog(@"response from server: %@", dataString);
     
     /* Check if login was successful */
     NSString *error_found = @"no_error";

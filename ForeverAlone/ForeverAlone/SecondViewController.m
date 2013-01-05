@@ -17,6 +17,7 @@
 
 @synthesize navigation;
 @synthesize back;
+@synthesize avatar;     
 
 AppDelegate* app;
 
@@ -35,6 +36,10 @@ AppDelegate* app;
 {
     [super viewDidLoad];
     app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    /* Load the users avatar */
+    [avatar setImage:[UIImage imageWithContentsOfFile:@"cat.png"]];
+    NSLog(@"loaded avatar");
 	
 }
 

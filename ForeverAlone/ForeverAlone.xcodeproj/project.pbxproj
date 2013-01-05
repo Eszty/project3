@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF84B061698765700CB6126 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF84B051698765700CB6126 /* cat.png */; };
 		A57C006F15F4E6F700891F8D /* libmysqlclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A57C006E15F4E6F700891F8D /* libmysqlclient.a */; };
 		C954AAF115A1BF0C007A7AAB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */; };
 		C9964B581599AF85002A9EDE /* DatabaseFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9964B571599AF85002A9EDE /* DatabaseFunctions.m */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CF84B051698765700CB6126 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		A57C006E15F4E6F700891F8D /* libmysqlclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmysqlclient.a; path = ForeverAlone/libmysqlclient.a; sourceTree = "<group>"; };
 		C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C9964B561599AF85002A9EDE /* DatabaseFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseFunctions.h; sourceTree = "<group>"; };
@@ -32365,6 +32367,7 @@
 		C9A5EA591585E88700C7B324 /* ForeverAlone */ = {
 			isa = PBXGroup;
 			children = (
+				3CF84B051698765700CB6126 /* cat.png */,
 				C9A5EAB31588B89700C7B324 /* anonymity.png */,
 				C9A5EA631585E88700C7B324 /* AppDelegate.m */,
 				C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */,
@@ -32511,6 +32514,7 @@
 				C9A5EA9F158610D600C7B324 /* SecondViewController.xib in Resources */,
 				C9A5EAAE158620C400C7B324 /* FlipsideViewController.xib in Resources */,
 				C9A5EAB41588B89700C7B324 /* anonymity.png in Resources */,
+				3CF84B061698765700CB6126 /* cat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32681,6 +32685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sammy Odenhoven (3A49KCE5C3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ForeverAlone/ForeverAlone-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -32702,6 +32707,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B61D25EB-2EA5-4AE0-BFC1-E9F7747FB1B2";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};

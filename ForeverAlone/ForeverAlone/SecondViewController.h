@@ -12,6 +12,7 @@
 
 @property (nonatomic, retain) IBOutlet UINavigationBar *navigation;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
+@property (nonatomic, retain) IBOutlet UIImageView *avatar;
 
 - (void)viewWillAppear:(BOOL)animated;
 - (IBAction)goBack:(id)sender;
