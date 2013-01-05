@@ -15,9 +15,15 @@
 
 @end
 
-@implementation DatabaseFunctions
+@implementation DatabaseFunctions;
 
-
+/* Send the users device token to the database */
+- (void)setDeviceToken:(NSData*)deviceToken
+{
+    /* Set the global variable, so it can be used by the registration function */
+    NSData *devicetoken = deviceToken;
+    NSLog(@"devicetoken in set() %@", devicetoken);
+}
 
 //Check username and password to login. 
 - (NSString*)inlog:(NSString*)name passWord:(NSString*)pword
@@ -88,7 +94,8 @@
 
 //Registration function
 - (NSString*)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)imageData
-{  
+{
+    NSLog(@"devicetoken in register(): %@", devicetoken);
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/register.php"]];
     
     // create request
@@ -118,6 +125,12 @@
     [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"password\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[[NSString stringWithFormat:@"%@\r\n", pword] dataUsingEncoding:NSUTF8StringEncoding]];
     
+    
+    // append device token
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"devicetoken\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", devicetoken] dataUsingEncoding:NSUTF8StringEncoding]];
+    
     // add image data
     if (imageData) {
         [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -145,7 +158,7 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //NSLog(@"response from server: %@", dataString);
+    NSLog(@"response from server: %@", dataString);
     
     /* Check if login was successful */
     NSString *error_found = @"no_error";

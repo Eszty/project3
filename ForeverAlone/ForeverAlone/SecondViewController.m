@@ -38,7 +38,7 @@ AppDelegate* app;
     app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
     /* Load the users avatar */
-    [avatar setImage:[UIImage imageWithContentsOfFile:@"cat.png"]];
+    [avatar setImage:[UIImage imageWithContentsOfFile:@"cat"]];
     NSLog(@"loaded avatar");
 	
 }

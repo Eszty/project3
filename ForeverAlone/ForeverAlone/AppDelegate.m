@@ -12,11 +12,15 @@
 
 #import "SecondViewController.h"
 
+#import "DatabaseFunctions.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
 @synthesize userName;
+
+DatabaseFunctions* userDB;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -27,13 +31,27 @@
     
     // Let the device know we want to receive push notifications
 	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];    
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+	NSLog(@"My token is: %@", deviceToken);
+    
+    /* Set the global device token variable */
+    userDB = [[DatabaseFunctions alloc]init];
+    [userDB setDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	NSLog(@"Failed to get token, error: %@", error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

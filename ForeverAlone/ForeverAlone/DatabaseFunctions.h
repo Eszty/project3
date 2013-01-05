@@ -10,8 +10,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DatabaseFunctions : NSObject
+@interface DatabaseFunctions : NSObject {
+}
 
+extern NSData *devicetoken;
 
 - (NSString*)inlog:(NSString*)name passWord:(NSString*)pword;
 - (NSString*)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)avatarImage;
