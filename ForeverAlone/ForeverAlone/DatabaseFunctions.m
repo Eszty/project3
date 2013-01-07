@@ -9,7 +9,7 @@
 /***** Class for login and register functions ******/
 
 #import "DatabaseFunctions.h"
-
+#import "AppDelegate.h"
 
 @interface DatabaseFunctions ()
 
@@ -17,7 +17,68 @@
 
 @implementation DatabaseFunctions;
 
+AppDelegate* app;
 
+
+/* Send user's location to the server */
+- (NSString*) send_location:(NSString*)longitude latitude:(NSString*)latitude {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/update_location.php"]];
+    
+    // create request
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    [request setHTTPShouldHandleCookies:NO];
+    [request setTimeoutInterval:30];
+    [request setHTTPMethod:@"POST"];
+    
+    // set Content-Type in HTTP header
+    NSString* boundary = @"akljsdflkadsfjfd";
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
+    [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
+    
+    // post body
+    NSMutableData *body = [NSMutableData data];
+    
+    // append longitude
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"longitude\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", longitude] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //append latitude    
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"latitude\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", latitude] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //append username
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"username\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", app.userName] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    // setting the body of the post to the reqeust
+    [request setHTTPBody:body];
+    
+    // set the content-length
+    NSString *postLength = [NSString stringWithFormat:@"%d", [body length]];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    
+    // set URL
+    [request setURL:url];
+    
+    //Get response from server
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    //NSLog(@"response from server: %@", dataString);
+    
+    // Check if login was successful
+    NSString* error_found = @"no_error";
+    NSRange range = [dataString rangeOfString:error_found];
+    if (range.location == NSNotFound) {
+        NSLog(@"Something went wrong while trying to upload location to the server: %@", dataString);
+    }
+    return error_found;
+}
 
 //Check username and password to login. 
 - (NSString*)inlog:(NSString*)name passWord:(NSString*)pword
@@ -65,7 +126,7 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //NSLog(@"response from server: %@", dataString);
+    NSLog(@"response from server: %@", dataString);
     
     /* Check if login was successful */
     NSString* error_found = @"no_error";

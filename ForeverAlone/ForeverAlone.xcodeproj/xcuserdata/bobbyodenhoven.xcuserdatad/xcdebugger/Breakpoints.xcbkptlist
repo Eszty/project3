@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ForeverAlone/DatabaseFunctions.m"
-         timestampString = "379259018.095343"
+         timestampString = "379290898.723999"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
          landmarkName = "@implementation DatabaseFunctions"
          landmarkType = "3">
       </FileBreakpoint>

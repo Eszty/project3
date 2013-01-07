@@ -13,7 +13,7 @@
 @interface DatabaseFunctions : NSObject {
 }
 
-
+- (NSString*) send_location:(NSString*)longitude latitude:(NSString*)latitude;
 - (NSString*)inlog:(NSString*)name passWord:(NSString*)pword;
 - (NSString*)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)avatarImage;
 

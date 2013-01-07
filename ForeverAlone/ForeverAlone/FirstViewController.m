@@ -160,15 +160,25 @@ AppDelegate *app;
     NSString *currentLatitude = [[NSString alloc] 
                                  initWithFormat:@"%g", 
                                  newLocation.coordinate.latitude];
-    NSLog(@"Latitude: %@", currentLatitude); //Print current latitude
     
     NSString *currentLongitude = [[NSString alloc] 
                                   initWithFormat:@"%g",
                                   newLocation.coordinate.longitude];
-    NSLog(@"Longitude: %@", currentLongitude); //Print current longitude
     
+    NSString *oldLatitude = [[NSString alloc]
+                                 initWithFormat:@"%g",
+                                 oldLocation.coordinate.latitude];
     
-    
+    NSString *oldLongitude = [[NSString alloc]
+                                  initWithFormat:@"%g",
+                                  oldLocation.coordinate.longitude];
+    if (![currentLatitude isEqualToString:oldLatitude] && ![currentLongitude isEqualToString: oldLongitude]) {
+
+        [userDB send_location:currentLatitude latitude:currentLatitude];
+    }
+    else {
+        //NSLog(@"location didn't change");
+    }
     [currentLatitude release];
     [currentLongitude release];
 }
