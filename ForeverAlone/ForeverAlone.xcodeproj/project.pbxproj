@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3CCC9B50169B03BD0047DD2A /* deviceTokenClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC9B4F169B03BD0047DD2A /* deviceTokenClass.m */; };
+		3CCC9B58169B4A740047DD2A /* chatman.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CCC9B57169B4A740047DD2A /* chatman.png */; };
 		3CF84B061698765700CB6126 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF84B051698765700CB6126 /* cat.png */; };
 		A57C006F15F4E6F700891F8D /* libmysqlclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A57C006E15F4E6F700891F8D /* libmysqlclient.a */; };
 		C954AAF115A1BF0C007A7AAB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		3CCC9B4E169B03BD0047DD2A /* deviceTokenClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deviceTokenClass.h; sourceTree = "<group>"; };
 		3CCC9B4F169B03BD0047DD2A /* deviceTokenClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deviceTokenClass.m; sourceTree = "<group>"; };
+		3CCC9B57169B4A740047DD2A /* chatman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatman.png; sourceTree = "<group>"; };
 		3CF84B051698765700CB6126 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		A57C006E15F4E6F700891F8D /* libmysqlclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmysqlclient.a; path = ForeverAlone/libmysqlclient.a; sourceTree = "<group>"; };
 		C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -32370,11 +32372,12 @@
 		C9A5EA591585E88700C7B324 /* ForeverAlone */ = {
 			isa = PBXGroup;
 			children = (
+				3CCC9B57169B4A740047DD2A /* chatman.png */,
 				3CF84B051698765700CB6126 /* cat.png */,
 				C9A5EAB31588B89700C7B324 /* anonymity.png */,
 				C9A5EA631585E88700C7B324 /* AppDelegate.m */,
-				C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */,
 				C9A5EA621585E88700C7B324 /* AppDelegate.h */,
+				C9A5EAAA1586144800C7B324 /* FlipsideViewController.h */,
 				C9A5EAAB1586144800C7B324 /* FlipsideViewController.m */,
 				C9A5EAAD158620C400C7B324 /* FlipsideViewController.xib */,
 				C9A5EA651585E88700C7B324 /* FirstViewController.h */,
@@ -32520,6 +32523,7 @@
 				C9A5EAAE158620C400C7B324 /* FlipsideViewController.xib in Resources */,
 				C9A5EAB41588B89700C7B324 /* anonymity.png in Resources */,
 				3CF84B061698765700CB6126 /* cat.png in Resources */,
+				3CCC9B58169B4A740047DD2A /* chatman.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

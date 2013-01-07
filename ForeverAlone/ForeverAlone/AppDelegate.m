@@ -40,13 +40,18 @@ DatabaseFunctions* userDB;
     return YES;
 }
 
-- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
-{
-	NSLog(@"My token is: %@", deviceToken);
-    
-    /* Set the devicetoken as a user-default */
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
+
+    NSString *device_token = [[[deviceToken description]
+                    stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]]
+                   stringByReplacingOccurrencesOfString:@" "
+                   withString:@""];
+
+    NSLog(@"My token is: %@", device_token);
+ 
+   /* Set the devicetoken as a user-default */
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:deviceToken forKey:@"device_token"];
+    [defaults setObject:device_token forKey:@"device_token"];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error

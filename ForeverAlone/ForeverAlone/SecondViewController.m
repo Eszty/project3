@@ -17,7 +17,9 @@
 
 @synthesize navigation;
 @synthesize back;
-@synthesize avatar;     
+@synthesize avatar;
+@synthesize username;
+@synthesize chatlist;
 
 AppDelegate* app;
 
@@ -37,11 +39,47 @@ AppDelegate* app;
     [super viewDidLoad];
     app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
-    /* Load the users avatar */
-    [avatar setImage:[UIImage imageWithContentsOfFile:@"cat"]];
-    NSLog(@"loaded avatar");
-	
+    /* Load the users avatar and username */
+    avatar.image = [UIImage imageNamed:@"cat"];
+    username.text = [@"Welcome " stringByAppendingString:app.userName];
+    
+    /* Load the chatlist */
+    NSArray *chatbots = [[NSArray alloc] initWithObjects:@"Chatbot #1", @"Chatbot #2", @"Chatbot #3", nil];
+    chatlist = chatbots;
 }
+
+/* Returns number of rows in the chatlist */
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [chatlist count];
+}
+
+/* Create the chatlists cells */
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleTableIdentifier"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"SimpleTableIdentifier"];        
+    }
+    UIImage *cellImage = [UIImage imageNamed:@"chatman.png"];
+    cell.imageView.image = cellImage;
+    cell.textLabel.text = [chatlist objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = @"Tap to chat";
+    return cell;
+}
+
+/* Gets fired when a row in chatlist is tapped */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Chatbot"
+                                                    message: @"Ik ben Chatman. Super snel met MSN. Er is niemand die me niet kent."
+                                                    delegate:self
+                                                    cancelButtonTitle:@"Close"
+                                                    otherButtonTitles:nil];
+    
+    [alert show];
+}
+
+
 
 - (void)viewDidUnload
 {
@@ -57,7 +95,6 @@ AppDelegate* app;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    navigation.topItem.title = app.userName;
 }
 
 //Go back to login

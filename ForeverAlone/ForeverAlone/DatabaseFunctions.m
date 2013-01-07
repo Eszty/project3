@@ -154,7 +154,7 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSString *dataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(@"response from server: %@", dataString);
+    //NSLog(@"response from server: %@", dataString);
     
     /* Check if login was successful */
     NSString *error_found = @"no_error";
