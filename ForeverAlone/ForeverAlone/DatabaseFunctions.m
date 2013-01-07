@@ -17,13 +17,7 @@
 
 @implementation DatabaseFunctions;
 
-/* Send the users device token to the database */
-- (void)setDeviceToken:(NSData*)deviceToken
-{
-    /* Set the global variable, so it can be used by the registration function */
-    NSData *devicetoken = deviceToken;
-    NSLog(@"devicetoken in set() %@", devicetoken);
-}
+
 
 //Check username and password to login. 
 - (NSString*)inlog:(NSString*)name passWord:(NSString*)pword
@@ -95,6 +89,8 @@
 //Registration function
 - (NSString*)registerUser:(NSString*)loginName password:(NSString*)pword image:(NSData*)imageData
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *devicetoken = [defaults objectForKey:@"device_token"];
     NSLog(@"devicetoken in register(): %@", devicetoken);
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sammyo.net/alone/register.php"]];
     

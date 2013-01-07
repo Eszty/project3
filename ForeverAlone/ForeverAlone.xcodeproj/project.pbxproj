@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CCC9B50169B03BD0047DD2A /* deviceTokenClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC9B4F169B03BD0047DD2A /* deviceTokenClass.m */; };
 		3CF84B061698765700CB6126 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF84B051698765700CB6126 /* cat.png */; };
 		A57C006F15F4E6F700891F8D /* libmysqlclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A57C006E15F4E6F700891F8D /* libmysqlclient.a */; };
 		C954AAF115A1BF0C007A7AAB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CCC9B4E169B03BD0047DD2A /* deviceTokenClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deviceTokenClass.h; sourceTree = "<group>"; };
+		3CCC9B4F169B03BD0047DD2A /* deviceTokenClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deviceTokenClass.m; sourceTree = "<group>"; };
 		3CF84B051698765700CB6126 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		A57C006E15F4E6F700891F8D /* libmysqlclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmysqlclient.a; path = ForeverAlone/libmysqlclient.a; sourceTree = "<group>"; };
 		C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -32386,6 +32389,8 @@
 				C9A5EA6C1585E88700C7B324 /* SecondViewController.h */,
 				C9A5EA6D1585E88700C7B324 /* SecondViewController.m */,
 				C9A5EA761585E88700C7B324 /* SecondViewController.xib */,
+				3CCC9B4E169B03BD0047DD2A /* deviceTokenClass.h */,
+				3CCC9B4F169B03BD0047DD2A /* deviceTokenClass.m */,
 				C9A5EA96158610D600C7B324 /* en.lproj */,
 				C9A5EA5A1585E88700C7B324 /* Supporting Files */,
 			);
@@ -32555,6 +32560,7 @@
 				C9A5EA6E1585E88700C7B324 /* SecondViewController.m in Sources */,
 				C9A5EAAC1586144800C7B324 /* FlipsideViewController.m in Sources */,
 				C9964B581599AF85002A9EDE /* DatabaseFunctions.m in Sources */,
+				3CCC9B50169B03BD0047DD2A /* deviceTokenClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

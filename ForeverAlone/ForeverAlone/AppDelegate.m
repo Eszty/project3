@@ -44,9 +44,9 @@ DatabaseFunctions* userDB;
 {
 	NSLog(@"My token is: %@", deviceToken);
     
-    /* Set the global device token variable */
-    userDB = [[DatabaseFunctions alloc]init];
-    [userDB setDeviceToken:deviceToken];
+    /* Set the devicetoken as a user-default */
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:deviceToken forKey:@"device_token"];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
