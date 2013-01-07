@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3CCC9B50169B03BD0047DD2A /* deviceTokenClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC9B4F169B03BD0047DD2A /* deviceTokenClass.m */; };
 		3CCC9B58169B4A740047DD2A /* chatman.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CCC9B57169B4A740047DD2A /* chatman.png */; };
+		3CCC9B62169B88970047DD2A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CCC9B61169B88960047DD2A /* Default.png */; };
+		3CCC9B65169B88A10047DD2A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CCC9B64169B88A10047DD2A /* icon.png */; };
+		3CCC9B67169B88AB0047DD2A /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CCC9B66169B88AB0047DD2A /* icon2.png */; };
 		3CF84B061698765700CB6126 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF84B051698765700CB6126 /* cat.png */; };
 		A57C006F15F4E6F700891F8D /* libmysqlclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A57C006E15F4E6F700891F8D /* libmysqlclient.a */; };
 		C954AAF115A1BF0C007A7AAB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */; };
@@ -55,6 +58,9 @@
 		3CCC9B4E169B03BD0047DD2A /* deviceTokenClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deviceTokenClass.h; sourceTree = "<group>"; };
 		3CCC9B4F169B03BD0047DD2A /* deviceTokenClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deviceTokenClass.m; sourceTree = "<group>"; };
 		3CCC9B57169B4A740047DD2A /* chatman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatman.png; sourceTree = "<group>"; };
+		3CCC9B61169B88960047DD2A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3CCC9B64169B88A10047DD2A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		3CCC9B66169B88AB0047DD2A /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		3CF84B051698765700CB6126 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		A57C006E15F4E6F700891F8D /* libmysqlclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmysqlclient.a; path = ForeverAlone/libmysqlclient.a; sourceTree = "<group>"; };
 		C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -32338,6 +32344,9 @@
 		C9A5EA441585E88600C7B324 = {
 			isa = PBXGroup;
 			children = (
+				3CCC9B66169B88AB0047DD2A /* icon2.png */,
+				3CCC9B64169B88A10047DD2A /* icon.png */,
+				3CCC9B61169B88960047DD2A /* Default.png */,
 				A57C006E15F4E6F700891F8D /* libmysqlclient.a */,
 				C954AAF015A1BF0C007A7AAB /* MobileCoreServices.framework */,
 				C9964B621599FC1F002A9EDE /* CoreLocation.framework */,
@@ -32524,6 +32533,9 @@
 				C9A5EAB41588B89700C7B324 /* anonymity.png in Resources */,
 				3CF84B061698765700CB6126 /* cat.png in Resources */,
 				3CCC9B58169B4A740047DD2A /* chatman.png in Resources */,
+				3CCC9B62169B88970047DD2A /* Default.png in Resources */,
+				3CCC9B65169B88A10047DD2A /* icon.png in Resources */,
+				3CCC9B67169B88AB0047DD2A /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
